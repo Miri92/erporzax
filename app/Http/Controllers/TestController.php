@@ -23,11 +23,8 @@ class TestController extends Controller
         }
 
         $source = $this->key;
-
-        //dd($source);
         $objReader = IOFactory::createReader('Word2007');
         $phpWord = \PhpOffice\PhpWord\IOFactory::load($source);
-
 
         $text = "";
         foreach ($phpWord->getSections() as $section) {
