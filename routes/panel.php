@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\ReadController;
+use App\Http\Controllers\Panel\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +16,10 @@ use App\Http\Controllers\ReadController;
 |
 */
 
-Route::get('/', [TestController::class, 'index']);
+Route::get('/', [DashboardController::class, 'show']);
 Route::get('/read', [ReadController::class, 'index']);
+
+
 //Route::get('/', function () {
 //    return view('test');
 //
