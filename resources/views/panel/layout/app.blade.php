@@ -9,14 +9,14 @@
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" href="{{ asset('/panel/borex/assets/images/favicon.ico') }}">
 
     <!-- Bootstrap Css -->
-    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('/panel/borex/assets/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
-    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('/panel/borex/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- App Css-->
-    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('/panel/borex/assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -36,19 +36,19 @@
                 <div class="navbar-brand-box">
                     <a href="index.html" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="assets/images/logo-dark-sm.png" alt="" height="22">
+                                    <img src="{{asset('/panel/borex/assets/images/logo-dark-sm.png') }}" alt="" height="22">
                                 </span>
                         <span class="logo-lg">
-                                    <img src="assets/images/logo-dark-sm.png" alt="" height="22">
+                                    <img src="{{ asset('/panel/borex/assets/images/logo-dark-sm.png') }}" alt="" height="22">
                                 </span>
                     </a>
 
                     <a href="index.html" class="logo logo-light">
                                 <span class="logo-lg">
-                                    <img src="assets/images/logo-light.png" alt="" height="22">
+                                    <img src="{{ asset('/panel/borex/assets/images/logo-light.png') }}" alt="" height="22">
                                 </span>
                         <span class="logo-sm">
-                                    <img src="assets/images/logo-light-sm.png" alt="" height="22">
+                                    <img src="{{ asset('/panel/borex/assets/images/logo-light-sm.png') }}" alt="" height="22">
                                 </span>
                     </a>
                 </div>
@@ -68,207 +68,7 @@
             </div>
 
             <div class="d-flex">
-                <div class="dropdown">
-                    <button type="button" class="btn header-item"
-                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="icon-sm" data-eva="search-outline"></i>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-md p-0">
-                        <form class="p-2">
-                            <div class="search-box">
-                                <div class="position-relative">
-                                    <input type="text" class="form-control bg-light border-0" placeholder="Search...">
-                                    <i class="search-icon" data-eva="search-outline" data-eva-height="26" data-eva-width="26"></i>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
 
-                <div class="dropdown d-inline-block language-switch">
-                    <button type="button" class="btn header-item" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img class="header-lang-img" src="assets/images/flags/us.jpg" alt="Header Language" height="16">
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-end">
-
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="eng">
-                            <img src="assets/images/flags/us.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span>
-                        </a>
-
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="sp">
-                            <img src="assets/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
-                        </a>
-
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="gr">
-                            <img src="assets/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
-                        </a>
-
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="it">
-                            <img src="assets/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
-                        </a>
-
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ru">
-                            <img src="assets/images/flags/russia.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="dropdown d-none d-lg-inline-block">
-                    <button type="button" class="btn header-item noti-icon"
-                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="icon-sm" data-eva="grid-outline"></i>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0">
-                        <div class="p-3">
-                            <div class="row align-items-center">
-                                <div class="col">
-                                    <h5 class="m-0 font-size-15"> Web Apps </h5>
-                                </div>
-                                <div class="col-auto">
-                                    <a href="#!" class="small fw-semibold text-decoration-underline"> View All</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="px-lg-2 pb-2">
-                            <div class="row g-0">
-                                <div class="col">
-                                    <a class="dropdown-icon-item" href="#!">
-                                        <img src="assets/images/brands/github.png" alt="Github">
-                                        <span>GitHub</span>
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a class="dropdown-icon-item" href="#!">
-                                        <img src="assets/images/brands/bitbucket.png" alt="bitbucket">
-                                        <span>Bitbucket</span>
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a class="dropdown-icon-item" href="#!">
-                                        <img src="assets/images/brands/dribbble.png" alt="dribbble">
-                                        <span>Dribbble</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="row g-0">
-                                <div class="col">
-                                    <a class="dropdown-icon-item" href="#!">
-                                        <img src="assets/images/brands/dropbox.png" alt="dropbox">
-                                        <span>Dropbox</span>
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a class="dropdown-icon-item" href="#!">
-                                        <img src="assets/images/brands/mail_chimp.png" alt="mail_chimp">
-                                        <span>Mail Chimp</span>
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a class="dropdown-icon-item" href="#!">
-                                        <img src="assets/images/brands/slack.png" alt="slack">
-                                        <span>Slack</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="dropdown d-inline-block">
-                    <button type="button" class="btn header-item noti-icon" id="page-header-notifications-dropdown"
-                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="icon-sm" data-eva="bell-outline"></i>
-                        <span class="noti-dot bg-danger rounded-pill">4</span>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
-                         aria-labelledby="page-header-notifications-dropdown">
-                        <div class="p-3">
-                            <div class="row align-items-center">
-                                <div class="col">
-                                    <h5 class="m-0 font-size-15"> Notifications </h5>
-                                </div>
-                                <div class="col-auto">
-                                    <a href="#!" class="small fw-semibold text-decoration-underline"> Mark all as read</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div data-simplebar style="max-height: 250px;">
-                            <a href="#!" class="text-reset notification-item">
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0 me-3">
-                                        <img src="assets/images/users/avatar-3.jpg" class="rounded-circle avatar-sm" alt="user-pic">
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="mb-1">James Lemire</h6>
-                                        <div class="font-size-13 text-muted">
-                                            <p class="mb-1">It will seem like simplified English.</p>
-                                            <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span>1 hour ago</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#!" class="text-reset notification-item">
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0 avatar-sm me-3">
-                                                <span class="avatar-title bg-primary rounded-circle font-size-16">
-                                                    <i class="bx bx-cart"></i>
-                                                </span>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="mb-1">Your order is placed</h6>
-                                        <div class="font-size-13 text-muted">
-                                            <p class="mb-1">If several languages coalesce the grammar</p>
-                                            <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span>3 min ago</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#!" class="text-reset notification-item">
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0 avatar-sm me-3">
-                                                <span class="avatar-title bg-success rounded-circle font-size-16">
-                                                    <i class="bx bx-badge-check"></i>
-                                                </span>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="mb-1">Your item is shipped</h6>
-                                        <div class="font-size-13 text-muted">
-                                            <p class="mb-1">If several languages coalesce the grammar</p>
-                                            <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span>3 min ago</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a href="#!" class="text-reset notification-item">
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0 me-3">
-                                        <img src="assets/images/users/avatar-6.jpg" class="rounded-circle avatar-sm" alt="user-pic">
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="mb-1">Salena Layfield</h6>
-                                        <div class="font-size-13 text-muted">
-                                            <p class="mb-1">As a skeptical Cambridge friend of mine occidental.</p>
-                                            <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span>1 hour ago</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="p-2 border-top d-grid">
-                            <a class="btn btn-sm btn-link font-size-14 btn-block text-center" href="javascript:void(0)">
-                                <i class="uil-arrow-circle-right me-1"></i> <span>View More..</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="dropdown d-inline-block">
                     <button type="button" class="btn header-item noti-icon right-bar-toggle" id="right-bar-toggle">
@@ -279,7 +79,7 @@
                 <div class="dropdown d-inline-block">
                     <button type="button" class="btn header-item user text-start d-flex align-items-center" id="page-header-user-dropdown"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
+                        <img class="rounded-circle header-profile-user" src="{{ asset('/panel/borex/assets/images/users/avatar-1.jpg') }}"
                              alt="Header Avatar">
                     </button>
                     <div class="dropdown-menu dropdown-menu-end pt-0">
@@ -307,19 +107,19 @@
         <div class="navbar-brand-box">
             <a href="index.html" class="logo logo-dark">
                         <span class="logo-sm">
-                            <img src="assets/images/logo-dark-sm.png" alt="" height="22">
+                            <img src="{{ asset('/panel/borex/assets/images/logo-dark-sm.png') }}" alt="" height="22">
                         </span>
                 <span class="logo-lg">
-                            <img src="assets/images/logo-dark.png" alt="" height="22">
+                            <img src="{{ asset('/panel/borex/assets/images/logo-dark.png') }}" alt="" height="22">
                         </span>
             </a>
 
             <a href="index.html" class="logo logo-light">
                         <span class="logo-lg">
-                            <img src="assets/images/logo-light.png" alt="" height="22">
+                            <img src="{{ asset('/panel/borex/assets/images/logo-light.png') }}" alt="" height="22">
                         </span>
                 <span class="logo-sm">
-                            <img src="assets/images/logo-light-sm.png" alt="" height="22">
+                            <img src="{{ asset('/panel/borex/assets/images/logo-light-sm.png') }}" alt="" height="22">
                         </span>
             </a>
         </div>
@@ -647,19 +447,19 @@
                 <div class="navbar-brand-box">
                     <a href="index.html" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="assets/images/logo-dark-sm.png" alt="" height="22">
+                                    <img src="{{ asset('/panel/borex/assets/images/logo-dark-sm.png') }}" alt="" height="22">
                                 </span>
                         <span class="logo-lg">
-                                    <img src="assets/images/logo-dark.png" alt="" height="22">
+                                    <img src="{{ asset('/panel/borex/assets/images/logo-dark.png') }}" alt="" height="22">
                                 </span>
                     </a>
 
                     <a href="index.html" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="assets/images/logo-light-sm.png" alt="" height="22">
+                                    <img src="{{ asset('/panel/borex/assets/images/logo-light-sm.png') }}" alt="" height="22">
                                 </span>
                         <span class="logo-lg">
-                                    <img src="assets/images/logo-light.png" alt="" height="22">
+                                    <img src="{{ asset('/panel/borex/assets/images/logo-light.png') }}" alt="" height="22">
                                 </span>
                     </a>
                 </div>
@@ -693,33 +493,33 @@
 
                 <div class="dropdown d-inline-block language-switch">
                     <button type="button" class="btn header-item" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img class="header-lang-img" src="assets/images/flags/us.jpg" alt="Header Language" height="16">
+                        <img class="header-lang-img" src="{{ asset('/panel/borex/assets/images/flags/us.jpg') }}" alt="Header Language" height="16">
                     </button>
                     <div class="dropdown-menu dropdown-menu-end">
 
                         <!-- item-->
                         <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="eng">
-                            <img src="assets/images/flags/us.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span>
+                            <img src="{{ asset('/panel/borex/assets/images/flags/us.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span>
                         </a>
 
                         <!-- item-->
                         <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="sp">
-                            <img src="assets/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
+                            <img src="{{ asset('/panel/borex/assets/images/flags/spain.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
                         </a>
 
                         <!-- item-->
                         <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="gr">
-                            <img src="assets/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
+                            <img src="{{ asset('/panel/borex/assets/images/flags/germany.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
                         </a>
 
                         <!-- item-->
                         <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="it">
-                            <img src="assets/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
+                            <img src="{{ asset('/panel/borex/assets/images/flags/italy.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
                         </a>
 
                         <!-- item-->
                         <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ru">
-                            <img src="assets/images/flags/russia.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
+                            <img src="{{ asset('/panel/borex/assets/images/flags/russia.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
                         </a>
                     </div>
                 </div>
@@ -744,19 +544,19 @@
                             <div class="row g-0">
                                 <div class="col">
                                     <a class="dropdown-icon-item" href="#!">
-                                        <img src="assets/images/brands/github.png" alt="Github">
+                                        <img src="{{ asset('/panel/borex/assets/images/brands/github.png') }}" alt="Github">
                                         <span>GitHub</span>
                                     </a>
                                 </div>
                                 <div class="col">
                                     <a class="dropdown-icon-item" href="#!">
-                                        <img src="assets/images/brands/bitbucket.png" alt="bitbucket">
+                                        <img src="{{ asset('/panel/borex/assets/images/brands/bitbucket.png') }}" alt="bitbucket">
                                         <span>Bitbucket</span>
                                     </a>
                                 </div>
                                 <div class="col">
                                     <a class="dropdown-icon-item" href="#!">
-                                        <img src="assets/images/brands/dribbble.png" alt="dribbble">
+                                        <img src="{{ asset('/panel/borex/assets/images/brands/dribbble.png') }}" alt="dribbble">
                                         <span>Dribbble</span>
                                     </a>
                                 </div>
@@ -765,19 +565,19 @@
                             <div class="row g-0">
                                 <div class="col">
                                     <a class="dropdown-icon-item" href="#!">
-                                        <img src="assets/images/brands/dropbox.png" alt="dropbox">
+                                        <img src="{{ asset('/panel/borex/assets/images/brands/dropbox.png') }}" alt="dropbox">
                                         <span>Dropbox</span>
                                     </a>
                                 </div>
                                 <div class="col">
                                     <a class="dropdown-icon-item" href="#!">
-                                        <img src="assets/images/brands/mail_chimp.png" alt="mail_chimp">
+                                        <img src="{{ asset('/panel/borex/assets/images/brands/mail_chimp.png') }}" alt="mail_chimp">
                                         <span>Mail Chimp</span>
                                     </a>
                                 </div>
                                 <div class="col">
                                     <a class="dropdown-icon-item" href="#!">
-                                        <img src="assets/images/brands/slack.png" alt="slack">
+                                        <img src="{{ asset('/panel/borex/assets/images/brands/slack.png') }}" alt="slack">
                                         <span>Slack</span>
                                     </a>
                                 </div>
@@ -786,94 +586,7 @@
                     </div>
                 </div>
 
-                <div class="dropdown d-inline-block">
-                    <button type="button" class="btn header-item noti-icon" id="page-header-notifications-dropdown"
-                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="icon-sm" data-eva="bell-outline"></i>
-                        <span class="noti-dot bg-danger rounded-pill">4</span>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
-                         aria-labelledby="page-header-notifications-dropdown">
-                        <div class="p-3">
-                            <div class="row align-items-center">
-                                <div class="col">
-                                    <h5 class="m-0 font-size-15"> Notifications </h5>
-                                </div>
-                                <div class="col-auto">
-                                    <a href="#!" class="small fw-semibold text-decoration-underline"> Mark all as read</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div data-simplebar style="max-height: 250px;">
-                            <a href="#!" class="text-reset notification-item">
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0 me-3">
-                                        <img src="assets/images/users/avatar-3.jpg" class="rounded-circle avatar-sm" alt="user-pic">
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="mb-1">James Lemire</h6>
-                                        <div class="font-size-13 text-muted">
-                                            <p class="mb-1">It will seem like simplified English.</p>
-                                            <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span>1 hours ago</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#!" class="text-reset notification-item">
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0 avatar-sm me-3">
-                                                <span class="avatar-title bg-primary rounded-circle font-size-16">
-                                                    <i class="bx bx-cart"></i>
-                                                </span>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="mb-1">Your order is placed</h6>
-                                        <div class="font-size-13 text-muted">
-                                            <p class="mb-1">If several languages coalesce the grammar</p>
-                                            <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span>3 min ago</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#!" class="text-reset notification-item">
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0 avatar-sm me-3">
-                                                <span class="avatar-title bg-success rounded-circle font-size-16">
-                                                    <i class="bx bx-badge-check"></i>
-                                                </span>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="mb-1">Your item is shipped</h6>
-                                        <div class="font-size-13 text-muted">
-                                            <p class="mb-1">If several languages coalesce the grammar</p>
-                                            <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span>3 min ago</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
 
-                            <a href="#!" class="text-reset notification-item">
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0 me-3">
-                                        <img src="assets/images/users/avatar-6.jpg" class="rounded-circle avatar-sm" alt="user-pic">
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="mb-1">Salena Layfield</h6>
-                                        <div class="font-size-13 text-muted">
-                                            <p class="mb-1">As a skeptical Cambridge friend of mine occidental.</p>
-                                            <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span>1 hours ago</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="p-2 border-top d-grid">
-                            <a class="btn btn-sm btn-link font-size-14 btn-block text-center" href="javascript:void(0)">
-                                <i class="uil-arrow-circle-right me-1"></i> <span>View More..</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="dropdown d-inline-block">
                     <button type="button" class="btn header-item noti-icon right-bar-toggle" id="right-bar-toggle">
@@ -884,7 +597,7 @@
                 <div class="dropdown d-inline-block">
                     <button type="button" class="btn header-item user text-start d-flex align-items-center" id="page-header-user-dropdown"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
+                        <img class="rounded-circle header-profile-user" src="{{ asset('/panel/borex/assets/images/users/avatar-1.jpg') }}"
                              alt="Header Avatar">
                     </button>
                     <div class="dropdown-menu dropdown-menu-end pt-0">
@@ -1618,7 +1331,7 @@
                             <div class="card">
                                 <div class="card-body p-0">
                                     <div class="user-profile-img">
-                                        <img src="assets/images/pattern-bg.jpg"
+                                        <img src="{{ asset('/panel/borex/assets/images/pattern-bg.jpg') }}"
                                              class="profile-img profile-foreground-img rounded-top" style="height: 120px;"
                                              alt="">
                                         <div class="overlay-content rounded-top">
@@ -1649,7 +1362,7 @@
 
                                     <div class="mt-n5 position-relative">
                                         <div class="text-center">
-                                            <img src="assets/images/users/avatar-1.jpg" alt=""
+                                            <img src="{{ asset('/panel/borex/assets/images/users/avatar-1.jpg') }}" alt=""
                                                  class="avatar-xl rounded-circle img-thumbnail">
 
                                             <div class="mt-3">
@@ -2510,17 +2223,17 @@
 </div>
 
 <!-- JAVASCRIPT -->
-<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/libs/metismenujs/metismenujs.min.js"></script>
-<script src="assets/libs/simplebar/simplebar.min.js"></script>
-<script src="assets/libs/eva-icons/eva.min.js"></script>
+<script src="{{ asset('/panel/borex/assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('/panel/borex/assets/libs/metismenujs/metismenujs.min.js') }}"></script>
+<script src="{{ asset('/panel/borex/assets/libs/simplebar/simplebar.min.js') }}"></script>
+<script src="{{ asset('/panel/borex/assets/libs/eva-icons/eva.min.js') }}"></script>
 
 <!-- apexcharts -->
-<script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+<script src="{{ asset('/panel/borex/assets/libs/apexcharts/apexcharts.min.js') }}"></script>
 
-<script src="assets/js/pages/dashboard.init.js"></script>
+<script src="{{ asset('/panel/borex/assets/js/pages/dashboard.init.js') }}"></script>
 
-<script src="assets/js/app.js"></script>
+<script src="{{ asset('/panel/borex/assets/js/app.js') }}"></script>
 
 </body>
 
