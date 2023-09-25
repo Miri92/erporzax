@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TestController;
-use App\Http\Controllers\ReadController;
 use App\Http\Controllers\Panel\DashboardController;
+use App\Http\Controllers\Panel\DocController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,8 +15,15 @@ use App\Http\Controllers\Panel\DashboardController;
 |
 */
 
-Route::get('/', [DashboardController::class, 'show']);
-Route::get('/read', [ReadController::class, 'index']);
+Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
+
+Route::controller(DocController::class)
+    ->prefix('doc')
+    ->name('doc.')->group(function () {
+    Route::get('/', 'index')->name('index');
+    Route::post('/create', 'create')->name('create');
+    Route::post('/store', 'store')->name('store');
+});
 
 
 //Route::get('/', function () {
