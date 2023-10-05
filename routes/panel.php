@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Panel\SliderController;
 use App\Http\Controllers\Panel\DashboardController;
 use App\Http\Controllers\Panel\DocController;
 
@@ -21,9 +22,22 @@ Route::controller(DocController::class)
     ->prefix('doc')
     ->name('doc.')->group(function () {
     Route::get('/', 'index')->name('index');
-    Route::post('/create', 'create')->name('create');
+    Route::get('/create', 'create')->name('create');
     Route::post('/store', 'store')->name('store');
-});
+    Route::get('/edit/{doc}', 'edit')->name('edit');
+
+    });
+
+
+Route::controller(SliderController::class)
+    ->prefix('slider')
+    ->name('slider.')->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/create', 'create')->name('create');
+        Route::post('/store', 'store')->name('store');
+        Route::get('/edit/{slider}', 'edit')->name('edit');
+
+    });
 
 
 //Route::get('/', function () {
