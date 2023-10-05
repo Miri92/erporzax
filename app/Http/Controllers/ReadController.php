@@ -17,6 +17,7 @@ class ReadController extends Controller
     public function index(Request $request){
 
         $source = storage_path('app/'.$this->key);
+        dd($source);
         $objReader = IOFactory::createReader('Word2007');
         $phpWord = $objReader->load($source);
 
