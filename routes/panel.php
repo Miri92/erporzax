@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Panel\SliderController;
 use App\Http\Controllers\Panel\DashboardController;
 use App\Http\Controllers\Panel\DocController;
+use App\Http\Controllers\Panel\TestimonialController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +37,21 @@ Route::controller(SliderController::class)
         Route::get('/create', 'create')->name('create');
         Route::post('/store', 'store')->name('store');
         Route::get('/edit/{slider}', 'edit')->name('edit');
+        Route::post('/edit/{slider}', 'update')->name('update');
+        Route::post('/delete/{slider}', 'delete')->name('delete');
 
+    });
+
+
+Route::controller(TestimonialController::class)
+    ->prefix('testimonial')
+    ->name('testimonial.')->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/create', 'create')->name('create');
+        Route::post('/store', 'store')->name('store');
+        Route::get('/edit/{slider}', 'edit')->name('edit');
+        Route::post('/edit/{slider}', 'update')->name('update');
+        Route::post('/delete/{slider}', 'delete')->name('delete');
     });
 
 

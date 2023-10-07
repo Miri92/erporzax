@@ -1,12 +1,12 @@
 @extends('panel.layout.app')
-@section('title', 'Doc')
+@section('title', 'Testimonials')
 
 @section('content')
 
     <div class="row align-items-center">
         <div class="col-md-6">
             <div class="mb-3">
-                <h5 class="card-title">Doc List <span class="text-muted fw-normal ms-2">(834)</span></h5>
+                <h5 class="card-title">Testimonia List</h5>
             </div>
         </div>
 
@@ -14,7 +14,7 @@
             <div class="d-flex flex-wrap align-items-center justify-content-end gap-2 mb-3">
 
                 <div>
-                    <a href="{{ route('panel.doc.create') }}"
+                    <a href="{{ route('panel.testimonial.create') }}"
                        class="btn btn-primary">
                         <i class="bx bx-plus me-1"></i>
                         Add New
@@ -30,6 +30,8 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card">
+                <form action="#">
+                    @csrf
                 <div class="p-4">
                     <div class="table-responsive">
                         <table class="table mb-0">
@@ -39,38 +41,45 @@
                                 <th>#id</th>
                                 <th>Author</th>
                                 <th>Status</th>
-                                <th>Doc file</th>
                                 <th>Title</th>
+                                <th>Photo</th>
+                                <th>Order</th>
                                 <th>Created at</th>
                                 <th>Actions</th>
                             </tr>
                             </thead>
                             <tbody>
 
-                                @if($docs)
-                                    @foreach($docs as $doc)
+                                @if($rows)
+                                    @foreach($rows as $row)
                                         <tr>
-                                            <th scope="row">{{$doc->id}}</th>
-                                            <td>{{$doc->user_id}}</td>
+                                            <th scope="row">{{$row->id}}</th>
+                                            <td>{{$row->user_id}}</td>
                                             <td>
 
-                                                @if($doc->status == 0)
-                                                    <span class="badge badge-soft-danger mb-0">{{ __('doc.status_'.$doc->status) }}</span>
+                                                @if($row->status == 0)
+                                                    <span class="badge badge-soft-danger mb-0">{{ __('doc.status_'.$row->status) }}</span>
                                                 @else
-                                                    <span class="badge badge-soft-success mb-0">{{ __('doc.status_'.$doc->status) }}</span>
+                                                    <span class="badge badge-soft-success mb-0">{{ __('doc.status_'.$row->status) }}</span>
                                                 @endif
 
                                             </td>
+                                            <td>{{$row->title}}</td>
                                             <td>
-                                                <a href="{{ asset($doc->doc)  }}">{{$doc->title ?? 'Doc link'}}</a>
+
+                                                <a href="{{ url($row->photo) }}">
+                                                    <img class="img-thumbnail"
+                                                         style="max-width: 150px"
+                                                         src="{{ url($row->photo) }}" alt="">
+                                                </a>
                                             </td>
-                                            <td>{{$doc->title}}</td>
-                                            <td>{{$doc->created_at}}</td>
+                                            <td>{{$row->order}}</td>
+                                            <td>{{$row->created_at}}</td>
                                             <td>
 
                                                 <ul class="list-inline mb-0">
                                                     <li class="list-inline-item">
-                                                        <a href="{{ route('panel.doc.edit', $doc->id) }}"
+                                                        <a href="{{ route('panel.slider.edit', $row->id) }}"
                                                            data-bs-toggle="tooltip"
                                                            data-bs-placement="top"
                                                            title=""
@@ -80,18 +89,17 @@
                                                         </a>
                                                     </li>
                                                     <li class="list-inline-item">
-                                                        <a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" class="px-2 text-danger" data-bs-original-title="Delete" aria-label="Delete"><i class="bx bx-trash-alt font-size-18"></i></a>
-                                                    </li>
-                                                    <li class="list-inline-item dropdown">
-                                                        <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
 
-                                                        <div class="dropdown-menu dropdown-menu-end" style="">
-                                                            <a class="dropdown-item" href="#">Action</a>
-                                                            <a class="dropdown-item" href="#">Another action</a>
-                                                            <a class="dropdown-item" href="#">Something else here</a>
-                                                        </div>
+                                                        <button class="px-2 text-danger btn"
+                                                                data-bs-toggle="tooltip"
+                                                                data-bs-placement="top"
+                                                                data-bs-original-title="Delete"
+                                                                aria-label="Delete"
+                                                        formaction="{{ route('panel.testimonial.delete', $row->id) }}"
+                                                        formmethod="post"
+                                                        type="submit">
+                                                            <i class="bx bx-trash-alt font-size-18"></i>
+                                                        </button>
                                                     </li>
                                                 </ul>
                                             </td>
@@ -102,6 +110,7 @@
                         </table>
                     </div>
                 </div>
+                </form>
             </div>
         </div>
     </div>
