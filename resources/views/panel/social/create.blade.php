@@ -1,5 +1,5 @@
 @extends('panel.layout.app')
-@section('title', 'testimonial create')
+@section('title', 'social create')
 
 
 @section('content')
@@ -8,48 +8,41 @@
 
         <div class="col-12">
 
-            <form method="post" action="{{ route('panel.testimonial.store') }}" enctype="multipart/form-data">
+            <form method="post" action="{{ route('panel.social_icon.store') }}" enctype="multipart/form-data">
 
 
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Create new Testimonial</h4>
+                        <h4 class="card-title">Create new social</h4>
                     </div>
                     <div class="card-body">
 
                         <div class="mb-3 row">
-                            <label for="full_name" class="col-md-2 col-form-label">Full Name</label>
+                            <label for="name" class="col-md-2 col-form-label">Name</label>
                             <div class="col-md-10">
-                                <input class="form-control" type="text" name="full_name" id="full_name"
-                                value="{{ old('full_name') }}">
+                                <input class="form-control" type="text" name="name" id="name"
+                                value="{{ old('name') }}">
                             </div>
                         </div>
 
                         <div class="mb-3 row">
-                            <label for="position" class="col-md-2 col-form-label">Position</label>
+                            <label for="url" class="col-md-2 col-form-label">Url</label>
                             <div class="col-md-10">
-                                <input class="form-control" type="text" name="position" id="position"
-                                value="{{ old('position') }}">
+                                <input class="form-control" type="text" name="url" id="url"
+                                value="{{ old('url') }}">
                             </div>
                         </div>
 
                         <div class="mb-3 row">
-                            <label for="body" class="col-md-2 col-form-label">Description</label>
+                            <label for="icon" class="col-md-2 col-form-label">Icon</label>
                             <div class="col-md-10">
-                            <textarea
-                                name="body"
-                                class="form-control"
-                                id="body">{{ old('body') }}</textarea>
+
+                                <input class="form-control" type="text" name="icon" id="icon"
+                                       value="{{ old('icon') }}">
                             </div>
                         </div>
 
 
-                        <div class="mb-3 row">
-                            <label for="photo" class="col-md-2 col-form-label">Photo</label>
-                            <div class="col-md-10">
-                                <input name="photo" class="form-control form-control-md" id="photo" type="file">
-                            </div>
-                        </div>
 
 
                         <div class="mb-3 row">

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Panel;
 
 use App\Models\Slider;
+use App\Models\SocialIcon;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -12,25 +13,24 @@ use Illuminate\Support\Facades\Storage;
 use PhpOffice\PhpWord\Element\AbstractContainer;
 use PhpOffice\PhpWord\Element\Text;
 use PhpOffice\PhpWord\IOFactory;
-class TestimonialController extends Controller
+class SocialIconController extends Controller
 {
 
     public function __construct(){
         $this->rules = [
-            'photo' => 'required|mimes:jpg,jpeg,png|max:2048',
-            'full_name' => 'required',
-            'position' => 'required',
-            'body' => 'required'
+            'name' => 'required',
+            'url' => 'required',
+            'icon' => 'required'
         ];
     }
     public function index(Request $request){
 
-        $rows = Testimonial::latest()->paginate(20);
-        return view('panel.testimonial.index', compact('rows'));
+        $rows = SocialIcon::latest()->paginate(20);
+        return view('panel.social.index', compact('rows'));
     }
 
     public function create(){
-        return view('panel.testimonial.create');
+        return view('panel.social.create');
     }
 
     public function store(Request $request){
@@ -39,40 +39,28 @@ class TestimonialController extends Controller
         $request->validate($this->rules);
 
         $arrCreate = [];
-        //dd($request->all());
-        if ($request->hasFile('photo')) {
-            if ($request->file('photo')->isValid()) {
 
-                $makedName = $request->title . time();
-                $path = $request->file('photo')->storeAs('testimonials', $makedName . '.jpg', 'public');
-                //Image::make(Storage::disk('public')->path($path))->fit(918, 504)->save(null, 100);
-                $arrCreate['photo'] = $path;
-            }
-        }
+        $arrCreate['name'] = $request->name;
+        $arrCreate['url'] = $request->url;
+        $arrCreate['icon'] = $request->icon;
+        $arrCreate['status'] = (int)$request->status;
 
-        $arrCreate['full_name']   = $request->full_name;
-        $arrCreate['body']        = $request->body;
-        $arrCreate['position']    = $request->position;
-        $arrCreate['status']      = (int)$request->publish;
+        SocialIcon::create($arrCreate);
 
-        //dd($arrCreate);
-
-        Testimonial::create($arrCreate);
-
-        return redirect()->route('panel.testimonial.index')
+        return redirect()->route('panel.social_icon.index')
             ->withSuccess('Kontent əlavə edildi');
 
     }
 
     public function edit(Request $request, $id){
-        $row = Testimonial::where('id','=',$id)->first();
+        $row = SocialIcon::where('id','=',$id)->first();
 
         if (!$row){
-            return redirect()->route('panel.testimonial.index')
+            return redirect()->route('panel.social_icon.index')
                 ->withError('The page not found');
         }
 
-        return view('panel.testimonial.edit', compact('row'));
+        return view('panel.social.edit', compact('row'));
 
     }
 
@@ -82,10 +70,10 @@ class TestimonialController extends Controller
 
         $request->validate($rules);
 
-        $row = Testimonial::where('id','=',$id)->first();
+        $row = SocialIcon::where('id','=',$id)->first();
 
         if (!$row){
-            return redirect()->route('panel.testimonial.index')
+            return redirect()->route('panel.social_icon.index')
                 ->withError('The page not found');
         }
 
@@ -104,9 +92,9 @@ class TestimonialController extends Controller
 
             }
         }
-        $arrCreate['full_name'] = $request->full_name;
-        $arrCreate['position'] = $request->position;
-        $arrCreate['body'] = $request->body;
+        $arrCreate['name'] = $request->name;
+        $arrCreate['url'] = $request->url;
+        $arrCreate['icon'] = $request->icon;
         $arrCreate['status'] = (int)$request->publish;
         $arrCreate['link'] = $request->link;
 
@@ -114,23 +102,24 @@ class TestimonialController extends Controller
 
         $row->update($arrCreate);
 
-        return redirect()->route('panel.testimonial.index')
+        return redirect()->route('panel.social_icon.index')
             ->withSuccess('Kontent yeniləndi');
     }
 
 
     public function delete(Request $request, $id){
 
-        $row = Testimonial::where('id','=',$id)->first();
+        $row = SocialIcon::where('id','=',$id)->first();
 
         if (!$row){
-            return redirect()->route('panel.testimonial.index')
+            return redirect()->route('panel.social_icon.index')
                 ->withError('The page not found');
         }
 
+
         $row->delete();
 
-        return redirect()->route('panel.testimonial.index')
+        return redirect()->route('panel.social_icon.index')
             ->withSuccess('Kontent silindi');
     }
 

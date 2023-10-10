@@ -36,7 +36,7 @@
             </li>
 
             <li>
-                <a href="{{ route('panel.doc.index') }}">
+                <a href="{{ route('panel.testimonial.index') }}">
                     <i class="icon nav-icon" data-eva="calendar-outline"></i>
                     <span class="menu-item" data-key="t-calendar">Testimonials</span>
                 </a>
@@ -46,6 +46,12 @@
                 <a href="{{ route('panel.doc.index') }}">
                     <i class="icon nav-icon" data-eva="calendar-outline"></i>
                     <span class="menu-item" data-key="t-calendar">Site Options</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('panel.social_icon.index') }}">
+                    <i class="icon nav-icon" data-eva="calendar-outline"></i>
+                    <span class="menu-item" data-key="t-calendar">Social Icons</span>
                 </a>
             </li>
 

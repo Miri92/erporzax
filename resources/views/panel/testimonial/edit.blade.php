@@ -1,5 +1,5 @@
 @extends('panel.layout.app')
-@section('title', 'Slider Edit')
+@section('title', 'testimonial Edit')
 
 
 @section('content')
@@ -8,42 +8,31 @@
 
         <div class="col-12">
 
-            <form method="post" action="{{ route('panel.slider.update', $row->id) }}" enctype="multipart/form-data">
+            <form method="post" action="{{ route('panel.testimonial.update', $row->id) }}" enctype="multipart/form-data">
 
 
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Edit slider</h4>
+                        <h4 class="card-title">Edit testimonial </h4>
                     </div>
                     <div class="card-body">
 
                         <div class="mb-3 row">
-                            <label for="title" class="col-md-2 col-form-label">Title</label>
+                            <label for="full_name" class="col-md-2 col-form-label">Full Name</label>
                             <div class="col-md-10">
-                                <input class="form-control" type="text" name="title" id="title"
-                                value="{{ $row->title }}">
+                                <input class="form-control" type="text" name="full_name" id="full_name"
+                                value="{{ $row->full_name }}">
                             </div>
                         </div>
 
                         <div class="mb-3 row">
-                            <label for="link" class="col-md-2 col-form-label">Link</label>
+                            <label for="position" class="col-md-2 col-form-label">Position</label>
                             <div class="col-md-10">
-                                <input class="form-control" type="text" name="link" id="link"
-                                value="{{ $row->link }}">
+                                <input class="form-control" type="text" name="position" id="position"
+                                value="{{ $row->position }}">
                             </div>
                         </div>
 
-                        <div class="mb-3 row">
-                            <label for="button_name" class="col-md-2 col-form-label">Button name</label>
-                            <div class="col-md-10">
-                                <input
-                                    name="button_name"
-                                    class="form-control"
-                                    type="text"
-                                    id="button_name"
-                                value="{{ $row->button_name }}">
-                            </div>
-                        </div>
 
                         <div class="mb-3 row">
                             <label for="body" class="col-md-2 col-form-label">Description</label>

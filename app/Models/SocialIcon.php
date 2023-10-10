@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Testimonial extends Model
+class SocialIcon extends Model
 {
 
     /**
@@ -13,10 +13,9 @@ class Testimonial extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'full_name',
-        'position',
-        'photo',
-        'body',
+        'name',
+        'url',
+        'icon',
         'order',
         'status'
     ];

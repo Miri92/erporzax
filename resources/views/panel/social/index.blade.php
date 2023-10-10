@@ -1,5 +1,5 @@
 @extends('panel.layout.app')
-@section('title', 'Testimonials')
+@section('title', 'socials')
 
 @section('content')
 
@@ -14,7 +14,7 @@
             <div class="d-flex flex-wrap align-items-center justify-content-end gap-2 mb-3">
 
                 <div>
-                    <a href="{{ route('panel.testimonial.create') }}"
+                    <a href="{{ route('panel.social_icon.create') }}"
                        class="btn btn-primary">
                         <i class="bx bx-plus me-1"></i>
                         Add New
@@ -39,11 +39,10 @@
                             <thead class="table-light">
                             <tr>
                                 <th>#id</th>
-                                <th>Author</th>
                                 <th>Status</th>
-                                <th>Title</th>
-                                <th>Photo</th>
-                                <th>Order</th>
+                                <th>name</th>
+                                <th>url</th>
+                                <th>icon</th>
                                 <th>Created at</th>
                                 <th>Actions</th>
                             </tr>
@@ -54,7 +53,6 @@
                                     @foreach($rows as $row)
                                         <tr>
                                             <th scope="row">{{$row->id}}</th>
-                                            <td>{{$row->user_id}}</td>
                                             <td>
 
                                                 @if($row->status == 0)
@@ -64,22 +62,15 @@
                                                 @endif
 
                                             </td>
-                                            <td>{{$row->title}}</td>
-                                            <td>
-
-                                                <a href="{{ url($row->photo) }}">
-                                                    <img class="img-thumbnail"
-                                                         style="max-width: 150px"
-                                                         src="{{ url($row->photo) }}" alt="">
-                                                </a>
-                                            </td>
-                                            <td>{{$row->order}}</td>
+                                            <td>{{$row->name}}</td>
+                                            <td>{{$row->url}}</td>
+                                            <td>{!! $row->icon !!}</td>
                                             <td>{{$row->created_at}}</td>
                                             <td>
 
                                                 <ul class="list-inline mb-0">
                                                     <li class="list-inline-item">
-                                                        <a href="{{ route('panel.testimonial.edit', $row->id) }}"
+                                                        <a href="{{ route('panel.social_icon.edit', $row->id) }}"
                                                            data-bs-toggle="tooltip"
                                                            data-bs-placement="top"
                                                            title=""
@@ -95,7 +86,7 @@
                                                                 data-bs-placement="top"
                                                                 data-bs-original-title="Delete"
                                                                 aria-label="Delete"
-                                                        formaction="{{ route('panel.testimonial.delete', $row->id) }}"
+                                                        formaction="{{ route('panel.social_icon.delete', $row->id) }}"
                                                         formmethod="post"
                                                         type="submit">
                                                             <i class="bx bx-trash-alt font-size-18"></i>

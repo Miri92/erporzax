@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Panel\SliderController;
 use App\Http\Controllers\Panel\DashboardController;
 use App\Http\Controllers\Panel\DocController;
+use App\Http\Controllers\Panel\SocialIconController;
 use App\Http\Controllers\Panel\TestimonialController;
 
 /*
@@ -52,6 +53,18 @@ Route::controller(TestimonialController::class)
         Route::get('/edit/{slider}', 'edit')->name('edit');
         Route::post('/edit/{slider}', 'update')->name('update');
         Route::post('/delete/{slider}', 'delete')->name('delete');
+    });
+
+
+Route::controller(SocialIconController::class)
+    ->prefix('socialicon')
+    ->name('social_icon.')->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/create', 'create')->name('create');
+        Route::post('/store', 'store')->name('store');
+        Route::get('/edit/{social_icon}', 'edit')->name('edit');
+        Route::post('/edit/{social_icon}', 'update')->name('update');
+        Route::post('/delete/{social_icon}', 'delete')->name('delete');
     });
 
 

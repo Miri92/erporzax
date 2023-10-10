@@ -1,5 +1,5 @@
 @extends('panel.layout.app')
-@section('title', 'testimonial create')
+@section('title', 'social Edit')
 
 
 @section('content')
@@ -8,55 +8,51 @@
 
         <div class="col-12">
 
-            <form method="post" action="{{ route('panel.testimonial.store') }}" enctype="multipart/form-data">
+            <form method="post" action="{{ route('panel.social_icon.update', $row->id) }}" enctype="multipart/form-data">
 
 
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Create new Testimonial</h4>
+                        <h4 class="card-title">Edit social </h4>
                     </div>
                     <div class="card-body">
 
                         <div class="mb-3 row">
-                            <label for="full_name" class="col-md-2 col-form-label">Full Name</label>
+                            <label for="name" class="col-md-2 col-form-label">Name</label>
                             <div class="col-md-10">
-                                <input class="form-control" type="text" name="full_name" id="full_name"
-                                value="{{ old('full_name') }}">
+                                <input class="form-control" type="text" name="name" id="name"
+                                value="{{ $row->name }}">
                             </div>
                         </div>
 
                         <div class="mb-3 row">
-                            <label for="position" class="col-md-2 col-form-label">Position</label>
+                            <label for="url" class="col-md-2 col-form-label">Url</label>
                             <div class="col-md-10">
-                                <input class="form-control" type="text" name="position" id="position"
-                                value="{{ old('position') }}">
-                            </div>
-                        </div>
-
-                        <div class="mb-3 row">
-                            <label for="body" class="col-md-2 col-form-label">Description</label>
-                            <div class="col-md-10">
-                            <textarea
-                                name="body"
-                                class="form-control"
-                                id="body">{{ old('body') }}</textarea>
+                                <input class="form-control" type="text" name="url" id="url"
+                                value="{{ $row->url }}">
                             </div>
                         </div>
 
 
                         <div class="mb-3 row">
-                            <label for="photo" class="col-md-2 col-form-label">Photo</label>
+                            <label for="icon" class="col-md-2 col-form-label">Icon</label>
                             <div class="col-md-10">
-                                <input name="photo" class="form-control form-control-md" id="photo" type="file">
+                                <input class="form-control" type="text" name="icon" id="icon"
+                                       value="{{ $row->icon }}">
                             </div>
                         </div>
+
 
 
                         <div class="mb-3 row">
                             <label for="publish" class="col-md-2 col-form-label">Publish</label>
                             <div class="col-md-10">
                                 <div class="form-check form-switch form-switch-lg mb-3" dir="ltr">
-                                    <input name="publish" class="form-check-input" type="checkbox" id="publish" value="1" checked>
+                                    <input name="publish"
+                                           class="form-check-input"
+                                           type="checkbox"
+                                           id="publish"
+                                           value="1" {{$row->status == 1? 'checked':''}}>
                                 </div>
                             </div>
                         </div>
