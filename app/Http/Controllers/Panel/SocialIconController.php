@@ -43,7 +43,7 @@ class SocialIconController extends Controller
         $arrCreate['name'] = $request->name;
         $arrCreate['url'] = $request->url;
         $arrCreate['icon'] = $request->icon;
-        $arrCreate['status'] = (int)$request->status;
+        $arrCreate['status'] = (int)$request->publish;
 
         SocialIcon::create($arrCreate);
 
