@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Panel\SliderController;
+use App\Http\Controllers\Panel\OptionsController;
 use App\Http\Controllers\Panel\DashboardController;
 use App\Http\Controllers\Panel\DocController;
 use App\Http\Controllers\Panel\SocialIconController;
@@ -65,6 +66,13 @@ Route::controller(SocialIconController::class)
         Route::get('/edit/{social_icon}', 'edit')->name('edit');
         Route::post('/edit/{social_icon}', 'update')->name('update');
         Route::post('/delete/{social_icon}', 'delete')->name('delete');
+    });
+
+Route::controller(OptionsController::class)
+    ->prefix('options')
+    ->name('options.')->group(function () {
+        Route::get('/edit/{options}', 'edit')->name('edit');
+        Route::post('/edit/{options}', 'update')->name('update');
     });
 
 

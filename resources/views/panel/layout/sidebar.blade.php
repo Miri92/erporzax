@@ -43,7 +43,7 @@
             </li>
 
             <li>
-                <a href="{{ route('panel.doc.index') }}">
+                <a href="{{ route('panel.options.edit', 1) }}">
                     <i class="icon nav-icon" data-eva="calendar-outline"></i>
                     <span class="menu-item" data-key="t-calendar">Site Options</span>
                 </a>

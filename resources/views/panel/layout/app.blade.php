@@ -15,8 +15,11 @@
     <link href="{{ asset('/panel/borex/assets/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
     <link href="{{ asset('/panel/borex/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
+    @yield('header-css-middle')
+
     <!-- App Css-->
     <link href="{{ asset('/panel/borex/assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
+    @yield('header-css-bottom')
 
 </head>
 
@@ -808,12 +811,11 @@
 <script src="{{ asset('/panel/borex/assets/libs/simplebar/simplebar.min.js') }}"></script>
 <script src="{{ asset('/panel/borex/assets/libs/eva-icons/eva.min.js') }}"></script>
 
-<!-- apexcharts -->
-<script src="{{ asset('/panel/borex/assets/libs/apexcharts/apexcharts.min.js') }}"></script>
 
-<script src="{{ asset('/panel/borex/assets/js/pages/dashboard.init.js') }}"></script>
+@yield('footer-js')
 
 <script src="{{ asset('/panel/borex/assets/js/app.js') }}"></script>
+
 
 </body>
 
