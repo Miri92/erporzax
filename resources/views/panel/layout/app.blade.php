@@ -804,18 +804,21 @@
         ...
     </div>
 </div>
+@yield('footer-js-top')
 
 <!-- JAVASCRIPT -->
 <script src="{{ asset('/panel/borex/assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('/panel/borex/assets/libs/metismenujs/metismenujs.min.js') }}"></script>
 <script src="{{ asset('/panel/borex/assets/libs/simplebar/simplebar.min.js') }}"></script>
 <script src="{{ asset('/panel/borex/assets/libs/eva-icons/eva.min.js') }}"></script>
+<script src="{{ asset('/panel/borex/assets/libs/alertifyjs/build/alertify.min.js') }}"></script>
 
 
 @yield('footer-js')
 
 <script src="{{ asset('/panel/borex/assets/js/app.js') }}"></script>
 
+@yield('footer-js-bottom')
 
 </body>
 

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Panel\MenuController;
 use App\Http\Controllers\Panel\SliderController;
 use App\Http\Controllers\Panel\OptionsController;
 use App\Http\Controllers\Panel\DashboardController;
@@ -66,6 +67,13 @@ Route::controller(SocialIconController::class)
         Route::get('/edit/{social_icon}', 'edit')->name('edit');
         Route::post('/edit/{social_icon}', 'update')->name('update');
         Route::post('/delete/{social_icon}', 'delete')->name('delete');
+    });
+
+Route::controller(MenuController::class)
+    ->prefix('menu')
+    ->name('menu.')->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::post('/store', 'store')->name('store');
     });
 
 Route::controller(OptionsController::class)
