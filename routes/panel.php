@@ -1,12 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\Authenticate;
+use App\Http\Middleware\AuthenticateAdmin;
+use App\Http\Middleware\AdminAuthenticated;
 use App\Http\Controllers\Panel\MenuController;
 use App\Http\Controllers\Panel\SliderController;
 use App\Http\Controllers\Panel\OptionsController;
 use App\Http\Controllers\Panel\DashboardController;
 use App\Http\Controllers\Panel\DocController;
 use App\Http\Controllers\Panel\SocialIconController;
+use App\Http\Controllers\Panel\Auth\LoginController;
 use App\Http\Controllers\Panel\TestimonialController;
 
 /*
@@ -19,8 +23,11 @@ use App\Http\Controllers\Panel\TestimonialController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
 
-Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
+Route::middleware([AuthenticateAdmin::class])->group(function () {
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
+});
 
 Route::controller(DocController::class)
     ->prefix('doc')
