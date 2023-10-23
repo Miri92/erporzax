@@ -1,10 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Middleware\Authenticate;
 use App\Http\Middleware\AuthenticateAdmin;
-use App\Http\Middleware\AdminAuthenticated;
 use App\Http\Controllers\Panel\MenuController;
+use App\Http\Controllers\Panel\UserController;
 use App\Http\Controllers\Panel\SliderController;
 use App\Http\Controllers\Panel\OptionsController;
 use App\Http\Controllers\Panel\DashboardController;
@@ -39,6 +38,12 @@ Route::controller(DocController::class)
 
     });
 
+Route::controller(UserController::class)
+    ->prefix('user')
+    ->name('user.')->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/edit/{slider}', 'edit')->name('edit');
+    });
 
 Route::controller(SliderController::class)
     ->prefix('slider')
@@ -49,7 +54,6 @@ Route::controller(SliderController::class)
         Route::get('/edit/{slider}', 'edit')->name('edit');
         Route::post('/edit/{slider}', 'update')->name('update');
         Route::post('/delete/{slider}', 'delete')->name('delete');
-
     });
 
 

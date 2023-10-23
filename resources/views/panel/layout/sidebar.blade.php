@@ -43,6 +43,13 @@
             </li>
 
             <li>
+                <a href="{{ route('panel.user.index') }}">
+                    <i class="icon nav-icon" data-eva="calendar-outline"></i>
+                    <span class="menu-item" data-key="t-calendar">Users</span>
+                </a>
+            </li>
+
+            <li>
                 <a href="{{ route('panel.options.edit', 1) }}">
                     <i class="icon nav-icon" data-eva="calendar-outline"></i>
                     <span class="menu-item" data-key="t-calendar">Site Options</span>
