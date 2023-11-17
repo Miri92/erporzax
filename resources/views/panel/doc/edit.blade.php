@@ -1,5 +1,5 @@
 @extends('panel.layout.app')
-@section('title', 'Dashboard')
+@section('title', 'Doc')
 
 
 @section('content')
@@ -7,21 +7,30 @@
 
         <div class="col-12">
 
-            <form method="post" action="{{ route('panel.slider.update', $row->id) }}" enctype="multipart/form-data">
+            <form method="post" action="" enctype="multipart/form-data">
 
 
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Edit slider</h4>
+                        <h4 class="card-title"></h4>
                     </div>
                     <div class="card-body">
 
+                        @if($paragraphs)
+                            @foreach($paragraphs as $paragraph)
 
-                        <div class="row">
-                            <div class="col-12 text-right">
-                                <button type="submit" class="btn btn-primary w-md float-end">Submit</button>
-                            </div>
-                        </div>
+
+                                    @foreach($paragraph as $row)
+                                        @if(isset($row['body']))
+                                            <p>
+                                                {!! $row['body'] !!}
+                                            </p>
+                                        @endif
+
+                                    @endforeach
+
+                            @endforeach
+                        @endif
                     </div>
                 </div>
 
@@ -31,5 +40,8 @@
 
         </div>
     </div>
+
+
+
 
 @endsection

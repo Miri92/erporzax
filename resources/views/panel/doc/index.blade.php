@@ -4,13 +4,9 @@
 @section('content')
 
     <div class="row align-items-center">
-        <div class="col-md-6">
-            <div class="mb-3">
-                <h5 class="card-title">Doc List <span class="text-muted fw-normal ms-2">(834)</span></h5>
-            </div>
-        </div>
 
-        <div class="col-md-6">
+
+        <div class="col-md-12">
             <div class="d-flex flex-wrap align-items-center justify-content-end gap-2 mb-3">
 
                 <div>
@@ -80,19 +76,19 @@
                                                         </a>
                                                     </li>
                                                     <li class="list-inline-item">
-                                                        <a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" class="px-2 text-danger" data-bs-original-title="Delete" aria-label="Delete"><i class="bx bx-trash-alt font-size-18"></i></a>
-                                                    </li>
-                                                    <li class="list-inline-item dropdown">
-                                                        <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
 
-                                                        <div class="dropdown-menu dropdown-menu-end" style="">
-                                                            <a class="dropdown-item" href="#">Action</a>
-                                                            <a class="dropdown-item" href="#">Another action</a>
-                                                            <a class="dropdown-item" href="#">Something else here</a>
-                                                        </div>
+                                                        <form action="{{ route("panel.doc.delete",$doc->id) }}" method="post">
+                                                            @csrf
+                                                            <button type="submit"
+                                                                    class="px-2 text-danger btn"
+                                                                    data-bs-toggle="tooltip"
+                                                                    data-bs-placement="top"
+                                                                    data-bs-original-title="Delete"
+                                                                    aria-label="Delete" >
+                                                                <i class="bx bx-trash-alt font-size-18"></i></button>
+                                                        </form>
                                                     </li>
+
                                                 </ul>
                                             </td>
                                         </tr>
