@@ -19,4 +19,10 @@ class Doc extends Model
         'title',
         'body',
     ];
+
+    public function paragraphs(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(DocParagraph::class,
+            'doc_id','id');
+    }
 }

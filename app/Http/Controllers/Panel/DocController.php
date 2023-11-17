@@ -80,19 +80,12 @@ class DocController extends Controller
     public function edit(Doc $doc)
     {
 
-        //dd($doc->doc);
-        //$path = asset($doc->doc);
+        $doc->load('paragraphs');
 
-        //$exists = Storage::disk('public')->has($doc->doc);
-       // $uploadsDir = Storage::disk('public')->files('uploads');
-       // $source = storage_path($doc->doc);
+        //dd($doc);
 
-        $DocService = new DocService();
-        $DocService->setPath($doc->doc);
-        $DocService->parse();
-        $paragraphs = $DocService->getParagraphs();
 
-        return view('panel.doc.edit', compact('paragraphs'));
+        return view('panel.doc.edit', compact('doc'));
     }
 
     public function update(Request $request){

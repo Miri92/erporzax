@@ -18,16 +18,16 @@
                     </div>
                     <div class="card-body">
 
-                        <div class="mb-3 row">
-                            <label for="name" class="col-md-2 col-form-label">Name</label>
-                            <div class="col-md-10">
-                                <input class="form-control" type="text" name="name" id="name"
-                                       value="{{ old('name') }}">
-                            </div>
-                        </div>
+{{--                        <div class="mb-3 row">--}}
+{{--                            <label for="name" class="col-md-2 col-form-label">Name</label>--}}
+{{--                            <div class="col-md-10">--}}
+{{--                                <input class="form-control" type="text" name="name" id="name"--}}
+{{--                                       value="{{ old('name') }}">--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
                         <div class="mb-3 row">
-                            <label for="title" class="col-md-2 col-form-label">title</label>
+                            <label for="title" class="col-md-2 col-form-label">Title</label>
                             <div class="col-md-10">
                                 <input class="form-control" type="text" name="title" id="title"
                                        value="{{ old('title') }}">
