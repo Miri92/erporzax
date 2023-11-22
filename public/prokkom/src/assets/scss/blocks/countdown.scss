@@ -1,0 +1,97 @@
+.event__countdown {
+	position: relative;
+}
+
+.countdown-block {
+	background-color: var(--grey-color5);
+	padding: 22px 12px 10px 12px;
+}
+
+.countdown-header {
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--dark-color);
+	text-transform: uppercase;
+}
+.counter-div {
+	display: flex;
+	flex-direction: row;
+	gap: 24px;
+	justify-content: center;
+	padding: 0;
+}
+.counter-element {
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+}
+.number-div {
+	background-color: var(--dark-color);
+	border-radius: 7px;
+	width: 80px;
+	padding: 12px 0;
+	font-size: 22px;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: var(--white-color);
+}
+.element-text {
+	font-size: 12px;
+	font-weight: 500;
+	margin: 0;
+	color: var(--secondary-color);
+}
+.counter-animate {
+	animation: slideInFromTop 0.5s ease-in-out;
+
+	.show {
+		opacity: 1;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.number-div {
+		width: 60px;
+	}
+	.counter-div {
+		gap: 5px;
+	}
+	.et-desktop {
+		display: none;
+	}
+}
+@media screen and (min-width: 451px) {
+	.et-mobile {
+		display: none;
+	}
+}
+
+@keyframes slideInFromTop {
+	from {
+		transform: translateY(-20%);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+}
+
+.counter-animate {
+	animation: slideDown 0.5s ease-in-out;
+}
+
+.show {
+	opacity: 1;
+}
+
+@keyframes slideDown {
+	from {
+		transform: translateY(-10px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}

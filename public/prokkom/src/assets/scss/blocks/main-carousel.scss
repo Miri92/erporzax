@@ -1,0 +1,275 @@
+.slider__box {
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+.news__carousel {
+	.slider_nav {
+		.owl-dots {
+			.owl-dot {
+				background: $white;
+				&.active {
+					background: $white !important;
+					opacity: 1;
+					@include transition(all 0.3s);
+				}
+			}
+		}
+	}
+}
+
+.text__overlay {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #7d7d7d 100%);
+		backdrop-filter: blur(27px);
+		z-index: -1;
+	}
+}
+
+.owl-slide-text {
+	position: relative;
+	padding: 0;
+	height: 100%;
+	padding: 25px 30px;
+	z-index: 3;
+
+	@include breakpoint($sm-bp) {
+		margin: 10px;
+		position: absolute;
+		top: 2%;
+		left: 0;
+	}
+
+	.owl-slide-title {
+		font-size: 14px;
+		font-weight: 400;
+		color: $white;
+
+		@include breakpoint($sm-bp) {
+			display: none;
+		}
+	}
+
+	.owl-slide-subtitle {
+		font-size: 24px;
+		font-weight: 600;
+		color: $white;
+
+		@include breakpoint($sm-bp) {
+			display: none;
+		}
+	}
+
+	// .video-btn {
+	// 	@include breakpoint($sm-bp) {
+	// 		display: none;
+	// 	}
+	// }
+
+	.owl-slide-cta {
+		display: inline-flex;
+		margin: 0 auto 17px;
+		@include transition(all 0.5s);
+
+		&.login-btn {
+			@include breakpoint($sm-bp) {
+				display: none;
+			}
+		}
+
+		&:hover {
+			@include transition(all 0.5s);
+		}
+
+		i {
+			font-size: 34px;
+		}
+	}
+}
+
+.cover {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.owl-carousel .owl-slide {
+	position: relative;
+	height: 100vh;
+	max-height: 610px;
+	background-color: lightgray;
+
+	@include breakpoint($sm-bp) {
+		max-height: 261px;
+	}
+}
+
+.owl-carousel .owl-slide-animated {
+	transform: translateX(20px);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.05s;
+}
+
+.owl-carousel .owl-slide-animated.is-transitioned {
+	transform: none;
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.5s;
+}
+
+.owl-carousel .owl-slide-title.is-transitioned {
+	transition-delay: 0.2s;
+}
+
+.owl-carousel .owl-slide-subtitle.is-transitioned {
+	transition-delay: 0.35s;
+}
+
+.owl-carousel .owl-slide-cta.is-transitioned {
+	transition-delay: 0.5s;
+}
+
+.slider_nav {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: auto;
+	position: absolute;
+	bottom: 5%;
+	right: 3%;
+	z-index: 3;
+
+	@include breakpoint($sm-bp) {
+		width: 100%;
+		max-width: 200px;
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+	}
+
+	.owl-dots .owl-dot,
+	.owl-nav [class*="owl-"]:focus {
+		outline: none;
+	}
+
+	.owl-dots .owl-dot span {
+		background: transparent;
+		border: 1px solid var(--main-black-color);
+		transition: all 0.2s ease;
+	}
+
+	.owl-dots .owl-dot:hover span,
+	.owl-dots .owl-dot.active span {
+		background: var(--main-black-color);
+	}
+
+	.owl-dots {
+		margin: 0 30px;
+		text-align: center;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+
+		.owl-dot {
+			width: 12px;
+			height: 12px;
+			padding: 0;
+			border: none;
+			box-shadow: none;
+			color: transparent;
+			background: $white;
+			opacity: 0.4;
+			border-radius: 50%;
+			margin-left: 24px;
+			text-align: center;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			@include transition(all 0.3s);
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			&:hover {
+				background: var(--secondary-color);
+				opacity: 0.5;
+				@include transition(all 0.3s);
+			}
+
+			&.active {
+				background: var(--secondary-color);
+				opacity: 1;
+				@include transition(all 0.3s);
+			}
+
+			span {
+				border: none;
+			}
+		}
+	}
+
+	.owl-prev,
+	.owl-next {
+		border: none;
+		background-color: transparent;
+		background: transparent;
+		margin: 0;
+	}
+
+	.owl-prev i,
+	.owl-next i {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 30px;
+		height: 30px;
+		font-size: 20px;
+		color: var(--white-color);
+		background-color: transparent;
+		border-radius: 50%;
+		padding: 0;
+		opacity: 0.3;
+		transition: opacity 0.3s;
+	}
+
+	.owl-prev:hover i,
+	.owl-next:hover i {
+		opacity: 1;
+		background-color: var(--secondary-color);
+		color: var(--white-color);
+		transition: opacity 0.3s;
+	}
+
+	.owl-prev [class*="owl-"]:hover,
+	.owl-next [class*="owl-"]:hover {
+		background: transparent;
+		transition: opacity 0.3s;
+	}
+
+	@media screen and (max-width: 575px) {
+		.owl-prev,
+		.owl-next {
+			bottom: 5%;
+		}
+
+		.owl-prev i,
+		.owl-next i {
+			width: 24px;
+			height: 24px;
+		}
+	}
+}

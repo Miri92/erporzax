@@ -1,0 +1,245 @@
+/* Slider */
+.slick-slide {
+	margin: 0px 20px;
+}
+
+// .slick-slide img {
+// 	width: 100%;
+// }
+
+.slick-slider {
+	padding: 20px;
+	height: 100%;
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+	-ms-touch-action: pan-y;
+	touch-action: pan-y;
+	-webkit-tap-highlight-color: transparent;
+
+	&.partners__slide {
+		padding: 50px 150px;
+
+		@include breakpoint($sm-bp) {
+			padding: 40px 0;
+		}
+
+		a {
+			&:hover {
+				img {
+					filter: grayscale(0);
+					@include transition(all 0.3s);
+				}
+			}
+		}
+
+		.sponsors__title {
+			color: var(--grey-color);
+			font-size: 10px;
+			font-weight: 500;
+		}
+	}
+}
+
+.slick-list {
+	position: relative;
+	display: flex;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+.slick-list:focus {
+	outline: none;
+}
+
+.slick-list.dragging {
+	cursor: pointer;
+	cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+	position: relative;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	display: flex;
+}
+
+.slick-track:before,
+.slick-track:after {
+	display: table;
+	content: "";
+}
+
+.slick-track:after {
+	clear: both;
+}
+
+.slick-loading .slick-track {
+	visibility: hidden;
+}
+
+.slick-slide {
+	display: none;
+	float: left;
+	height: 100%;
+	min-height: 1px;
+	/* background-color: white; */
+}
+
+[dir="rtl"] .slick-slide {
+	float: right;
+}
+
+.slick-slide img {
+	display: flex;
+}
+
+.slick-slide.slick-loading img {
+	display: none;
+}
+
+.slick-slide.dragging img {
+	pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* width: 100%; */
+}
+
+.slick-loading .slick-slide {
+	visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+	display: flex;
+	height: 100%;
+	border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+	display: none;
+}
+
+.logo-slide {
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	border: none;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	display: flex;
+	background-color: transparent;
+
+	@include breakpoint($xs-bp) {
+	}
+}
+
+// .logo-slide a {
+// 	display: -webkit-box;
+// 	display: -ms-flexbox;
+// 	display: flex;
+// 	-webkit-box-pack: center;
+// 	-ms-flex-pack: center;
+// 	justify-content: center;
+// 	-ms-flex-wrap: wrap;
+// 	flex-wrap: wrap;
+// 	-webkit-box-orient: vertical;
+// 	-webkit-box-direction: normal;
+// 	-ms-flex-direction: column;
+// 	flex-direction: column;
+// }
+
+.logo-slide img {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 140px;
+	filter: grayscale(1);
+	@include transition(all 0.3s);
+}
+
+.slider-arrow {
+	button {
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		border-radius: 6px;
+		background-color: transparent;
+		color: var(--grey-color);
+		border: 1px solid var(--grey-color);
+		border-radius: 50%;	
+		@include transition(all 0.3s);
+		z-index: 1;
+
+		&.slick-prev {
+			top: 50%;
+			left: 0;
+			margin: 0 0 0 50px;
+			@include transform(translate(0, -50%));
+		}
+		&.slick-next {
+			top: 50%;
+			right: 0;
+			margin: 0 50px 0 0;
+			@include transform(translate(0, -50%));
+		}
+
+		&:hover {
+			background: var(--secondary-color);
+			background-color: var(--secondary-color);
+			color: $white;
+			border: 1px solid var(--secondary-color);
+			@include transition(all 0.3s);
+		}
+	}
+}
+
+.widgets-swiper {
+	.swiper-slide {
+		min-width: 240px;
+		max-width: 250px;
+	}
+}
+
+.news-swiper {
+	.swiper-slide {
+		min-height: 180px;
+		max-height: 181px;
+		min-width: 324px;
+		max-width: 325px;
+
+		@include breakpoint($sm-bp) {
+			.text__overflow {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				line-height: 1.625rem;
+				max-height: 3.5rem;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+		  }
+		}
+	}
+}

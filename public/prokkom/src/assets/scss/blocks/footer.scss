@@ -1,0 +1,134 @@
+footer {
+	.footer__logo {
+		@include breakpoint($sm-bp) {
+			max-height: 47px;
+		}
+	}
+
+	.footer__header {
+		padding: calculateRem(25px) 0;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+		@include breakpoint($lg-bp) {
+			padding: calculateRem(40px) 0;
+		}
+
+		@include breakpoint($md-bp) {
+			padding: calculateRem(40px) 0;
+		}
+	}
+
+	.footer__body {
+		padding: calculateRem(30px) 0;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+		@include breakpoint($lg-bp) {
+			padding: calculateRem(40px) 0;
+		}
+
+		@include breakpoint($md-bp) {
+			padding: calculateRem(40px) 0;
+		}
+	}
+
+	.footer__foot {
+		padding: calculateRem(20px) 0;
+
+		@include breakpoint($lg-bp) {
+			padding: calculateRem(20px) 0;
+		}
+
+		@include breakpoint($md-bp) {
+			padding: calculateRem(20px) 0;
+		}
+		@include breakpoint($sm-bp) {
+			padding: calculateRem(20px) 0;
+			background-color: var(--text-color);
+		}
+
+		.rights__text {
+			font-size: 10px;
+			font-style: normal;
+			font-weight: 500;
+		}
+	}
+
+	.links__list {
+		display: flex;
+
+		li {
+			margin-right: 26px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		@include breakpoint($xl-bp) {
+			display: flex;
+		}
+
+		@include breakpoint($lg-bp) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 26px;
+		}
+
+		@include breakpoint($md-bp) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 26px;
+		}
+	}
+
+	.terms__list {
+		li {
+			margin-right: 36px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	.social {
+		&__links {
+			.nav-item {
+				.nav-link {
+					width: calculateRem(30px);
+					height: calculateRem(30px);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					padding: 0;
+					background-color: rgba(255, 255, 255, 0.2);
+					border-radius: 50%;
+					margin-right: calculateRem(48px);
+					@include transition(all 0.3s);
+
+					i {
+						font-size: calculateRem(16px);
+						color: var(--white-color);
+						@include transition(all 0.3s);
+					}
+
+					&:hover {
+						background-color: rgba(255, 255, 255, 1);
+						@include transition(all 0.3s);
+
+						i {
+							color: var(--primary-color);
+							@include transition(all 0.3s);
+						}
+					}
+				}
+
+				&:last-child {
+					.nav-link {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<title>Prokkom</title>
+		
+		<!-- Icons -->
+		<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css?_v=20231001002912" />
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css?_v=20231001002912" />
+		<!-- Select2 -->
+		<link rel="stylesheet" href="assets/plugins/select2/select2.min.css?_v=20231001002912" />
+		<!-- Swiper -->
+		<link rel="stylesheet" href="assets/plugins/swiper/swiper.min.css?_v=20231001002912" />
+		<!-- Main css -->
+		<link rel="stylesheet" href="assets/css/style.min.css?_v=20231001002912" />
+	</head>
+	<body class="d-flex flex-column h-100">
+		<!-- Header -->
+
+		<header class="header fixed-top" id="header-main">
+			<nav class="navbar navbar-main navbar-expand-lg navbar-white navbar-light navbar-sticky" id="navbar-main">
+				<div class="container px-0 px-lg-0"><a href="#" class="d-flex d-lg-none position-relative overflow-hidden bg__gray-light border-radius__50 login__btn ms-3">
+  <i class="far fa-user text__black"></i>
+</a>
+
+<!-- Profile image -->
+<a class="navbar-brand mx-auto ms-lg-0" href="index.html">
+  <img alt="Image placeholder" src="assets/images/logo.png" class="img-fluid navbar-brand-img" />
+</a>
+<!-- Navbar collapse trigger -->
+<a class="navbar-toggler border-0 me-2" data-bs-toggle="collapse" data-bs-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
+  <div class="menu-btn">
+    <div class="menu-btn_burger"></div>
+  </div>
+</a>
+
+<!-- Navbar nav -->
+<div class="collapse navbar-collapse" id="navbar-main-collapse">
+  <a href="#" class="nav-link text-decoration-none d-block d-md-none w-100 border-top border-color__light text__color fw-medium sub__title1 login__link"> Daxil ol </a>
+  <a href="#" class="nav-link text-decoration-none d-block d-md-none w-100 border-top border-color__light text__color fw-medium sub__title1 reg__link"> Qeydiyyat </a>
+
+  <a href="#" class="row d-flex text-decoration-none profile__btn align-items-center py-3 g-0 order-first order-md-last ms-auto">
+    <div class="col-3 col-md-3 order-first order-md-last">
+      <div class="profile__img profile__link">
+        <img src="assets/images/testimonial1.png" alt="" />
+      </div>
+    </div>
+    <div class="col-9 col-md-6 offset-0 offset-lg-3 order-last order-md-first">
+      <div class="text-start p-0">
+        <p class="body__text1 fw-semibold text__color mb-0">Cameron Williamson</p>
+      </div>
+    </div>
+  </a>
+
+
+  <ul class="navbar-nav align-items-lg-center ms-auto">
+    <li class="nav-item active">
+      <a class="nav-link" href="index.html">Haqqımızda</a>
+    </li>
+    <li class="nav-item active">
+      <a class="nav-link" href="index.html">Kommentariyalar</a>
+    </li>
+    <li class="nav-item active">
+      <a class="nav-link" href="index.html">Sual-cavab</a>
+    </li>
+    <li class="nav-item me-0 d-lg-none d-xl-block">
+      <a class="nav-link" href="#">Əlaqə</a>
+    </li>
+    <li class="nav-item me-0 d-lg-none d-xl-block">
+      <a class="nav-link" href="#">Çıxış</a>
+    </li>
+  </ul>
+
+  <ul class="list-group list-unstyled list-group-horizontal social__links d-flex d-md-none mb-md-0 flex-wrap">
+    <h4 class="h4 text__color fw-bold w-100 mb-4">Bizi sosial mediada izlə</h4>
+    <li>
+      <a href="#" class="btn btn-primary position-relative overflow-hidden border-radius__50 text-decoration-none">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="btn btn-primary position-relative overflow-hidden border-radius__50 text-decoration-none">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="btn btn-primary position-relative overflow-hidden border-radius__50 text-decoration-none">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </li>
+  </ul>
+
+  <a href="contacts.html" class="btn btn-primary d-none d-lg-flex text-decoration-none border-radius__5 fw-bold px-5 ms-auto"><span>Daxil ol</span></a>
+
+</div>
+</div>
+			</nav>
+		</header>
+
+		<!-- Main -->
+		<main class="main flex-shrink-0 w-100">
+<section class="section__header pt-5 mt-5">
+	<div class="bg__gray-light">
+		<div class="container">
+			<div class="row g-0">
+				<div class="col-12 px-3 px-md-0"><nav class="breadcrumbs__nav" aria-label="breadcrumb">
+	<ol class="breadcrumb m-0">
+		<li class="breadcrumb-item"><a href="#">Ana səhifə</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Kommentariyalar</li>
+	</ol>
+</nav></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section__profile py-0 my-0 py-md-5 my-md-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-md-12 px-0">
+				<div class="bg__gray-light border-radius section-padding">
+					<div class="floating__box border-1 border border-color__light2 border-radius__20">
+						<h5 class="h5 fw-bold text-uppercase text__primary floated-title">ŞƏXSİ MƏLUMATLAR</h5>
+						<form class="row row-cols-1 row-cols-md-2 input-group w-100 m-0 g-3" action="">
+							<div class="col-12 col-md-12">
+								<div class="card border-0 rounded-0 bg-transparent h-100 p-0 mb-3">
+									<div class="row d-flex align-items-center g-0">
+										<div class="col-12 col-md-3 col-lg-2">
+											<div class="profile__img">
+												<input type="file" class="form-control" id="imageUpload" />
+												<i class="far fa-camera"></i>
+												<img src="assets/images/testimonial1.png" alt="" />
+											</div>
+										</div>
+										<div class="col-12 col-md-9 col-lg-10">
+											<div class="card-body profile__info p-0">
+												<h5 class="h5 fw-bold text__color">Cameron Williamson</h5>
+												<p class="sub__title fw-medium text__gray-dark mb-0">Hüquqşünas, Ali məhkəmə</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col">
+								<label for="inputCompany" class="form-label">Təşkilat</label>
+								<input type="text" class="form-control form__input" id="inputCompany" name="" placeholder="Some text..." />
+							</div>
+
+							<div class="col">
+								<label for="inputPosition" class="form-label">Vəzifə</label>
+								<input type="text" class="form-control form__input" id="inputPosition" name="" placeholder="Some text..." />
+							</div>
+
+							<div class="col">
+								<label for="inputEmail" class="form-label">Email</label>
+								<input type="email" class="form-control form__input" id="inputEmail" name="" placeholder="Some text..." />
+							</div>
+
+							<div class="col">
+								<label for="inputMobile" class="form-label">Mobil</label>
+								<input type="number" class="form-control form__input" id="inputEmail4" name="" placeholder="Some text..." />
+							</div>
+
+							<div class="col-12 col-md-6 text-center text-md-start">
+								<a href="#" type="submit" class="btn btn__submit mt-3">Dəyişikliyi yadda saxla</a>
+							</div>
+
+							<div class="col-12 col-md-6 text-center text-md-end">
+								<a href="#" class="btn btn__logout mt-3">Çıxış</a>
+							</div>
+						</form>
+					</div>
+					<div class="floating__box border-1 border border-color__light2 border-radius__20">
+						<h5 class="h5 fw-bold text-uppercase text__primary floated-title">KOMMENTLƏRİM</h5>
+
+						<div class="row g-4">
+							<div class="col-12 col-md-12">
+								<a href="#" class="btn d-flex bg-white hover-shadow text-decoration-none text-start justify-content-start align-items-baseline mw-100 mh-100 h-100 w-100">
+									<i class="fal fa-pen-line fs-6 text__primary me-3"></i>
+									<div class="info">
+										<h5 class="h5 fw-bold text__primary">Azərbaycan Respublikasının Əmək Məcəlləsində dəyişiklik edilməsi haqqında</h5>
+										<span class="sub__title fw-medium text__color">Azərbaycan Respublikasının Əmək Məcəlləsində dəyişiklik edilməsi haqqında</span>
+									</div>
+								</a>
+							</div>
+							<div class="col-12 col-md-12">
+								<a href="#" class="btn d-flex bg-white hover-shadow text-decoration-none text-start justify-content-start align-items-baseline mw-100 mh-100 h-100 w-100">
+									<i class="fal fa-pen-line fs-6 text__primary me-3"></i>
+									<div class="info">
+										<h5 class="h5 fw-bold text__primary">Azərbaycan Respublikasının Əmək Məcəlləsində dəyişiklik edilməsi haqqında</h5>
+										<span class="sub__title fw-medium text__color">Azərbaycan Respublikasının Əmək Məcəlləsində dəyişiklik edilməsi haqqında</span>
+									</div>
+								</a>
+							</div>
+							<div class="col-12 col-md-12">
+								<a href="#" class="btn d-flex bg-white hover-shadow text-decoration-none text-start justify-content-start align-items-baseline mw-100 mh-100 h-100 w-100">
+									<i class="fal fa-pen-line fs-6 text__primary me-3"></i>
+									<div class="info">
+										<h5 class="h5 fw-bold text__primary">Azərbaycan Respublikasının Əmək Məcəlləsində dəyişiklik edilməsi haqqında</h5>
+										<span class="sub__title fw-medium text__color">Azərbaycan Respublikasının Əmək Məcəlləsində dəyişiklik edilməsi haqqında</span>
+									</div>
+								</a>
+							</div>
+							<div class="col-12 col-md-12">
+								<a href="#" class="btn d-flex bg-white hover-shadow text-decoration-none text-start justify-content-start align-items-baseline mw-100 mh-100 h-100 w-100">
+									<i class="fal fa-pen-line fs-6 text__primary me-3"></i>
+									<div class="info">
+										<h5 class="h5 fw-bold text__primary">Azərbaycan Respublikasının Əmək Məcəlləsində dəyişiklik edilməsi haqqında</h5>
+										<span class="sub__title fw-medium text__color">Azərbaycan Respublikasının Əmək Məcəlləsində dəyişiklik edilməsi haqqında</span>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="floating__box border-1 border border-color__light2 border-radius__20">
+						<h5 class="h5 fw-bold text-uppercase text__primary floated-title">ABUNƏ MƏLUMATLARI</h5>
+						<div class="row g-4">
+							<div class="col-12 col-md-12">
+								<div class="bg-white border-radius__5 p-4">
+									<div class="row mb-3 g-4">
+										<div class="col-12">
+											<h5 class="h5 text__primary fw-bold">
+												<i class="far fa-crown fa-lg fa-md fa-xs me-2"></i>
+												Premium istifadəçi
+											</h5>
+										</div>
+									</div>
+									<div class="row align-items-center g-2">
+										<div class="col-12 col-md-12 col-lg-4 text-start text-lg-start">
+											<p class="body__text2 text__grey fw-semibold mb-0">Başlama tarixi: 24.06.23</p>
+										</div>
+										<div class="col-12 col-md-12 col-lg-4 text-start text-lg-center">
+											<p class="body__text2 text__grey fw-semibold mb-0">Növbəti ödəniş tarixi: 25.07.23</p>
+										</div>
+										<div class="col-12 col-md-12 col-lg-4 text-start text-lg-end">
+											<a href="#" class="btn btn-download hover-shadow mt-3 mt-lg-0">
+												<i class="fas fa-arrow-down me-3"></i>
+												<span>Download invoice</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="floating__box border-0 py-0">
+						<div class="row g-4">
+							<div class="col-12 col-md-12">
+								<div class="card card__premium text-center border-0 border-radius__20">
+									<div class="card-header text-center border-0 bg-transparent p-0">
+										<h3 class="h3 fw-bold text-white mb-4">Premium abunə ol</h3>
+										<p class="body__text1 fw-semibold text-white mb-0">With supporting text below as a natural lead-in to additional content.</p>
+									</div>
+									<div class="card-body justify-content-center text-start d-flex flex-column">
+										<ul class="body__text2 fw-medium text-white mx-auto p-0">
+											<li>View professional comments</li>
+											<li>Make conversations with laweys</li>
+										</ul>
+									</div>
+									<div class="card-footer text-center border-0 bg-transparent p-0">
+										<a href="#" class="btn btn-white text-decoration-none fw-bold hover-shadow mx-auto"> <i class="far fa-crown fa-lg fa-md fa-xs me-2"></i>Go somewhere</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+</main>
+
+		<!-- Footer -->
+		<footer class="footer mt-auto bg__primary z-1">
+			<div class="container"><div class="row footer__header">
+	<div class="col-12 col-sm-12 col-md-12 col-lg-8 px-3 px-md-0">
+		<ul class="list-group list-group-flush list-group-horizontal-lg flex-lg-wrap list-unstyled links__list body__text1 float-start">
+			<li><a href="#" class="text-decoration-none text__white">Haqqımızda</a></li>
+			<li><a href="#" class="text-decoration-none text__white">Kommentariyalar</a></li>
+			<li><a href="#" class="text-decoration-none text__white">Sual - cavab</a></li>
+			<li><a href="#" class="text-decoration-none text__white">Daxil ol</a></li>
+			<li><a href="#" class="text-decoration-none text__white">Qeydiyyat</a></li>
+			<li><a href="#" class="text-decoration-none text__white">Əlaqə</a></li>
+		</ul>
+	</div>
+
+	<div class="col-12 col-sm-12 col-md-12 col-lg-4 px-3 px-md-0 d-none d-md-none d-lg-flex justify-content-end">
+		<ul class="list-group list-group-horizontal list-unstyled terms__list body__text1 float-end">
+			<li><a href="#" class="text-decoration-none text__white">Terms & Conditions</a></li>
+			<li><a href="#" class="text-decoration-none text__white">Privacy Policy</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="row footer__body">
+	<div class="col-lg-4 d-flex align-items-center justify-content-start px-3 px-md-0">
+		<ul class="list-group-horizontal list-unstyled social__links d-none d-md-none d-lg-flex align-items-center">
+			<li class="nav-item">
+				<a class="nav-link" href="#">
+					<i class="fab fa-facebook"></i>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">
+					<i class="fab fa-twitter"></i>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">
+					<i class="fab fa-youtube"></i>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="col-6 col-lg-4 d-flex align-items-center justify-content-start justify-content-lg-center">
+		<img src="assets/images/logo-white.png" alt="" class="img-fluid" />
+	</div>
+
+	<div class="col-6 col-lg-4 d-flex align-items-center justify-content-end px-3 px-md-0">
+		<a href="#" class="btn btn-white text__primary fw-bold body__text1 border-radius__5">
+			<i class="far fa-crown me-2"></i>
+			<span>Abunə ol</span>
+		</a>
+	</div>
+</div>
+
+<div class="row d-flex d-lg-none py-4">
+	<div class="col-12 col-md-12 d-flex align-items-center justify-content-start px-3 px-md-0">
+		<ul class="list-group-horizontal list-unstyled social__links d-inline-flex justify-content-center align-items-center w-100">
+			<li class="nav-item">
+				<a class="nav-link" href="#">
+					<i class="fab fa-facebook"></i>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">
+					<i class="fab fa-twitter"></i>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">
+					<i class="fab fa-youtube"></i>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="col-12 col-sm-12 col-md-12 col-lg-4 px-3 px-md-0 pt-3 pb-3">
+		<ul class="list-group list-group-horizontal list-unstyled terms__list body__text1 text-center justify-content-center">
+			<li><a href="#" class="text-decoration-none text__white">Terms & Conditions</a></li>
+			<li><a href="#" class="text-decoration-none text__white">Privacy Policy</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="row footer__foot">
+	<div class="col-12 col-md-12 d-flex justify-content-center justify-content-md-start align-items-center px-3 px-md-0">
+		<a href="#" class="rights__text text__white text-decoration-none mb-0 me-2">
+			© 2023 All Rights Reserved. Developed by
+			<picture class="ms-2">
+				<source srcset="assets/images/era-logo-white.svg" type="image/svg+xml" />
+				<img src="assets/images/era-logo-white.svg" class="img-fluid" alt="..." />
+			</picture>
+		</a>
+	</div>
+</div>
+</div>
+		</footer>
+
+		<!-- JS-Assets -->
+		<script src="assets/plugins/jquery/jquery.min.js?_v=20231001002912"></script>
+		<!-- Bootstrap -->
+		<script src="assets/plugins/bootstrap/js/popper.min.js?_v=20231001002912"></script>
+		<script src="assets/plugins/bootstrap/js/bootstrap.min.js?_v=20231001002912"></script>
+		<!-- Select2 -->
+		<script src="assets/plugins/select2/select2.min.js?_v=20231001002912"></script>
+		<script src="assets/plugins/select2/select2.settings.js?_v=20231001002912"></script>
+		<!-- Swiper -->
+		<script src="assets/plugins/swiper/swiper.min.js?_v=20231001002912"></script>
+		<script src="assets/plugins/swiper/swiper-settings.js?_v=20231001002912"></script>
+		<script src="assets/plugins/custom.js?_v=20231001002912"></script>
+	</body>
+</html>

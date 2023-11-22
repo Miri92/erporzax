@@ -1,0 +1,171 @@
+
+
+#ERADataTable_wrapper {
+	.row {
+		&:last-child {
+			.col-md-5 {
+				display: none;
+			}
+			.col-md-7 {
+				width: 100%;
+			}
+		}
+	}
+
+	#ERADataTable {
+		border-radius: 12px 12px 0px 0px;
+		border-color: transparent;
+		background-color: var(--white-color);
+		margin-bottom: 0 !important;
+
+		thead {
+			tr {
+				th {
+					padding: 35px 40px;
+					text-align: center;
+					font-size: 14px;
+					font-weight: 600;
+					color: var(--dark-color);
+
+					&:first-child {
+						text-align: left;
+						width: 45%;
+					}
+				}
+			}
+		}
+
+		tbody {
+			tr {
+				td {
+					padding: 16px 10px;
+					text-align: center;
+					vertical-align: middle;
+					font-size: 14px;
+					font-weight: 400;
+					color: var(--dark-color);
+
+					&:first-child {
+						padding: 16px 40px;
+						text-align: left;
+						width: 45%;
+						font-weight: 500;
+						color: var(--primary-color);
+					}
+				}
+			}
+		}
+	}
+
+	.dataTables_scrollHead {
+		table {
+			border-radius: 12px 12px 0px 0px;
+
+			thead {
+				tr {
+					th {
+						padding: 35px 40px;
+						text-align: center;
+						font-size: 14px;
+						font-weight: 600;
+						color: var(--dark-color);
+						border-bottom: none;
+
+						&:first-child {
+							text-align: left;
+							width: 45%;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.dataTables_scrollBody {
+		table {
+			border-radius: 0px !important;
+			
+
+		}
+	}
+}
+
+#ERADataTable_paginate {
+	width: 100%;
+	padding: 40px 0;
+	background-color: var(--white-color);
+	display: flex;
+	justify-content: center;
+	border-radius: 0px 0px 12px 12px;
+
+	.paginate_button {
+		margin: 0 5px;
+
+		a {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			border: none;
+			color: var(--dark-color);
+			font-size: 13px;
+			font-weight: 500;
+			border: 1px solid var(--grey-color6);
+			background-color: transparent;
+			border-radius: 8px;
+			text-decoration: none;
+			transition: all 0.5s;
+
+			&:focus {
+				border: none;
+				box-shadow: none;
+			}
+
+			&:hover {
+				color: var(--secondary-color);
+				opacity: 0.7;
+				transition: all 0.5s;
+			}
+		}
+
+		&.previous {
+			color: var(--grey-color3);
+
+			a {
+				border: none;
+			}
+
+			@include breakpoint($md-bp) {
+				margin-right: auto;
+			}
+		}
+
+		&.next {
+			border: none;
+
+			a {
+				border: none;
+			}
+
+			@include breakpoint($md-bp) {
+				margin-left: auto;
+			}
+		}
+
+		&.active {
+			a {
+				border: none;
+				color: var(--white-color);
+				border-radius: 8px;
+				background-color: var(--secondary-color);
+			}
+		}
+
+		&.disabled {
+			a {
+				border: none;
+				color: var(--grey-color3);
+				background-color: transparent;
+			}
+		}
+	}
+}

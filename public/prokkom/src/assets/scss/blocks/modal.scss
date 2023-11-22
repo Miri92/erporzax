@@ -1,0 +1,59 @@
+.exhibitor__modal,
+.speaker__modal {
+	position: relative;
+	.modal-header {
+		padding: 40px 60px 0 60px;
+
+		@include breakpoint($sm-bp) {
+			padding: 40px 20px 0 20px;
+		}
+
+		.btn-close {
+			position: absolute;
+			right: 30px;
+			top: 30px;
+
+			@include breakpoint($sm-bp) {
+				right: 20px;
+				top: 20px;
+			}
+		}
+	}
+
+	.modal-body {
+		padding: 30px 60px;
+
+		@include breakpoint($sm-bp) {
+			padding: 20px 20px;
+		}
+	}
+
+	.modal-footer {
+		padding: 0 60px 30px 60px;
+
+		@include breakpoint($sm-bp) {
+			padding: 0 20px 30px 20px;
+		}
+	}
+}
+
+.speaker__modal {
+	.speaker__img {
+		width: 120px;
+		height: 120px;
+		aspect-ratio: 1/1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		position: relative;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+}

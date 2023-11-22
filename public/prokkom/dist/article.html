@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<title>Prokkom</title>
+		
+		<!-- Icons -->
+		<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css?_v=20231001002912" />
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css?_v=20231001002912" />
+		<!-- Select2 -->
+		<link rel="stylesheet" href="assets/plugins/select2/select2.min.css?_v=20231001002912" />
+		<!-- Swiper -->
+		<link rel="stylesheet" href="assets/plugins/swiper/swiper.min.css?_v=20231001002912" />
+		<!-- Main css -->
+		<link rel="stylesheet" href="assets/css/style.min.css?_v=20231001002912" />
+	</head>
+	<body class="d-flex flex-column h-100">
+		<!-- Header -->
+
+		<header class="header fixed-top" id="header-main">
+			<nav class="navbar navbar-main navbar-expand-lg navbar-white navbar-light navbar-sticky" id="navbar-main">
+				<div class="container px-0 px-lg-0"><a href="#" class="d-flex d-lg-none position-relative overflow-hidden bg__gray-light border-radius__50 login__btn ms-3">
+  <i class="far fa-user text__black"></i>
+</a>
+
+<!-- Profile image -->
+<a class="navbar-brand mx-auto ms-lg-0" href="index.html">
+  <img alt="Image placeholder" src="assets/images/logo.png" class="img-fluid navbar-brand-img" />
+</a>
+<!-- Navbar collapse trigger -->
+<a class="navbar-toggler border-0 me-2" data-bs-toggle="collapse" data-bs-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
+  <div class="menu-btn">
+    <div class="menu-btn_burger"></div>
+  </div>
+</a>
+
+<!-- Navbar nav -->
+<div class="collapse navbar-collapse" id="navbar-main-collapse">
+  <a href="#" class="nav-link text-decoration-none d-block d-md-none w-100 border-top border-color__light text__color fw-medium sub__title1 login__link"> Daxil ol </a>
+  <a href="#" class="nav-link text-decoration-none d-block d-md-none w-100 border-top border-color__light text__color fw-medium sub__title1 reg__link"> Qeydiyyat </a>
+
+  <a href="#" class="row d-flex text-decoration-none profile__btn align-items-center py-3 g-0 order-first order-md-last ms-auto">
+    <div class="col-3 col-md-3 order-first order-md-last">
+      <div class="profile__img profile__link">
+        <img src="assets/images/testimonial1.png" alt="" />
+      </div>
+    </div>
+    <div class="col-9 col-md-6 offset-0 offset-lg-3 order-last order-md-first">
+      <div class="text-start p-0">
+        <p class="body__text1 fw-semibold text__color mb-0">Cameron Williamson</p>
+      </div>
+    </div>
+  </a>
+
+
+  <ul class="navbar-nav align-items-lg-center ms-auto">
+    <li class="nav-item active">
+      <a class="nav-link" href="index.html">Haqqımızda</a>
+    </li>
+    <li class="nav-item active">
+      <a class="nav-link" href="index.html">Kommentariyalar</a>
+    </li>
+    <li class="nav-item active">
+      <a class="nav-link" href="index.html">Sual-cavab</a>
+    </li>
+    <li class="nav-item me-0 d-lg-none d-xl-block">
+      <a class="nav-link" href="#">Əlaqə</a>
+    </li>
+    <li class="nav-item me-0 d-lg-none d-xl-block">
+      <a class="nav-link" href="#">Çıxış</a>
+    </li>
+  </ul>
+
+  <ul class="list-group list-unstyled list-group-horizontal social__links d-flex d-md-none mb-md-0 flex-wrap">
+    <h4 class="h4 text__color fw-bold w-100 mb-4">Bizi sosial mediada izlə</h4>
+    <li>
+      <a href="#" class="btn btn-primary position-relative overflow-hidden border-radius__50 text-decoration-none">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="btn btn-primary position-relative overflow-hidden border-radius__50 text-decoration-none">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="btn btn-primary position-relative overflow-hidden border-radius__50 text-decoration-none">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </li>
+  </ul>
+
+  <a href="contacts.html" class="btn btn-primary d-none d-lg-flex text-decoration-none border-radius__5 fw-bold px-5 ms-auto"><span>Daxil ol</span></a>
+
+</div>
+</div>
+			</nav>
+		</header>
+
+		<!-- Main -->
+		<main class="main flex-shrink-0 w-100">
+<section class="section__header pt-5 mt-5">
+	<div class="bg__gray-light">
+		<div class="container">
+			<div class="row g-0">
+				<div class="col-12 px-3 px-md-0"><nav class="breadcrumbs__nav" aria-label="breadcrumb">
+	<ol class="breadcrumb m-0">
+		<li class="breadcrumb-item"><a href="#">Ana səhifə</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Kommentariyalar</li>
+	</ol>
+</nav></div>
+			</div>
+		</div>
+	</div>
+	<div class="container pt-5">
+		<div class="row">
+			<div class="col-12">
+				<h6 class="h6 fw-bold text__color mb-3">Maddə 139.</h6>
+				<h4 class="h4 fw-bold text__primary mb-4">Məzuniyyət haqqı ödənilərkən nəzərə alınan əmək haqqı növləri</h4>
+				<ol class="list-group body__text1 fw-normal text__color ms-3">
+					<li class="mb-3">Məzuniyyət vaxtı üçün ödənilən orta əmək haqqı hesablanarkən əməyin ödənilməsinin qüvvədə olan sisteminə daxil olmayan birdəfəlik ödənişlər istisna edilməklə bu Məcəllənin 154-cü maddəsinin birinci hissəsi ilə müəyyən edilmiş əmək haqqı anlayışına daxil olan bütün növ ödəmələr nəzərə alınır.</li>
+					<li class="mb-3">Məzuniyyət vaxtı üçün orta əmək haqqının hesablanması zamanı nəzərə alınan və alınmayan ödənişlərin geniş siyahısı, habelə məzuniyyət vaxtı üçün orta əmək haqqının əmsallaşdırılması qaydası müvafiq icra hakimiyyəti orqanı tərəfindən müəyyən edilir.</li>
+				</ol>
+			</div>
+			<div class="col-12 col-md-12 d-flex flex-nowrap justify-content-start align-items-center mt-3 mt-md-3">
+				<a href="#" class="btn btn-primary body__text2 fw-bold w-100 px-3 px-md-5"><span>Komment yaz</span></a>
+			</div>
+			<div class="col-12 col-md-12 mt-4 mt-md-4">
+				<div class="d-flex flex-nowrap justify-content-start align-items-center body__text2 text__grey fw-semibold">
+					<i class="far fa-info-circle fa-lg fa-fw me-2"></i>
+					<span>Kommentariya yazmaq üçün qeydiyyatdan keçin.</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section__comments pt-4 pt-md-5">
+	<div class="container border-top border-1 pt-4 pt-md-5 px-0">
+		<div class="row pt-3 mb-3 g-4 g-md-5">
+			<div class="col-12 col-md-12">
+				<div class="article__item px-3 px-md-0">
+					<h6 class="h6 fw-bold text__primary text-uppercase mb-3">ƏLAQƏLİ MADDƏLƏR</h6>
+					<p class="body__text1 fw-normal text__color m-0">
+						“Azərbaycan Respublikası Əmək Məcəlləsinin təsdiq edilməsi, qüvvəyə minməsi və bununla bağlı hüquqi tənzimləmə məsələləri haqqında” Azərbaycan Respublikası Qanununun tətbiq edilməsi barədə” Azərbaycan Respublikası Prezidentinin 1999-cu il 15 aprel tarixli 122 nömrəli Fərmanı https://e-qanun.az/framework/4630 <br /><br />
+						Məzuniyyət vaxtı üçün orta əmək haqqının hesablanması zamanı nəzərə alınan və alınmayan ödənişlərin müəyyən edilməsi və məzuniyyət vaxtı üçün orta əmək haqqının əmsallaşdırılması qaydasının təsdiq edilməsi barədə Azərbaycan Respublikasi Nazirlər Kabinetinin Qərarı https://e-qanun.az/framework/3947
+					</p>
+				</div>
+			</div>
+			<div class="col-12 col-md-12">
+				<div class="article__item px-3 px-md-0">
+					<h6 class="h6 fw-bold text__primary text-uppercase mb-3">ƏLAQƏLİ MADDƏLƏR</h6>
+					<p class="body__text1 fw-normal text__color m-0">
+						“Azərbaycan Respublikası Əmək Məcəlləsinin təsdiq edilməsi, qüvvəyə minməsi və bununla bağlı hüquqi tənzimləmə məsələləri haqqında” Azərbaycan Respublikası Qanununun tətbiq edilməsi barədə” Azərbaycan Respublikası Prezidentinin 1999-cu il 15 aprel tarixli 122 nömrəli Fərmanı https://e-qanun.az/framework/4630 <br /><br />
+						Məzuniyyət vaxtı üçün orta əmək haqqının hesablanması zamanı nəzərə alınan və alınmayan ödənişlərin müəyyən edilməsi və məzuniyyət vaxtı üçün orta əmək haqqının əmsallaşdırılması qaydasının təsdiq edilməsi barədə Azərbaycan Respublikasi Nazirlər Kabinetinin Qərarı https://e-qanun.az/framework/3947
+					</p>
+				</div>
+			</div>
+			<div class="col-12 col-md-12">
+				<div class="article__item px-3 px-md-0">
+					<h6 class="h6 fw-bold text__primary text-uppercase mb-3">ƏLAQƏLİ MADDƏLƏR</h6>
+					<p class="body__text1 fw-normal text__color m-0">
+						“Azərbaycan Respublikası Əmək Məcəlləsinin təsdiq edilməsi, qüvvəyə minməsi və bununla bağlı hüquqi tənzimləmə məsələləri haqqında” Azərbaycan Respublikası Qanununun tətbiq edilməsi barədə” Azərbaycan Respublikası Prezidentinin 1999-cu il 15 aprel tarixli 122 nömrəli Fərmanı https://e-qanun.az/framework/4630 <br /><br />
+						Məzuniyyət vaxtı üçün orta əmək haqqının hesablanması zamanı nəzərə alınan və alınmayan ödənişlərin müəyyən edilməsi və məzuniyyət vaxtı üçün orta əmək haqqının əmsallaşdırılması qaydasının təsdiq edilməsi barədə Azərbaycan Respublikasi Nazirlər Kabinetinin Qərarı https://e-qanun.az/framework/3947
+					</p>
+				</div>
+			</div>
+			<div class="col-12 col-md-12">
+				<div class="article__item px-3 px-md-0">
+					<h6 class="h6 fw-bold text__primary text-uppercase mb-3">ƏLAQƏLİ MADDƏLƏR</h6>
+					<p class="body__text1 fw-normal text__color m-0">
+						“Azərbaycan Respublikası Əmək Məcəlləsinin təsdiq edilməsi, qüvvəyə minməsi və bununla bağlı hüquqi tənzimləmə məsələləri haqqında” Azərbaycan Respublikası Qanununun tətbiq edilməsi barədə” Azərbaycan Respublikası Prezidentinin 1999-cu il 15 aprel tarixli 122 nömrəli Fərmanı https://e-qanun.az/framework/4630 <br /><br />
+						Məzuniyyət vaxtı üçün orta əmək haqqının hesablanması zamanı nəzərə alınan və alınmayan ödənişlərin müəyyən edilməsi və məzuniyyət vaxtı üçün orta əmək haqqının əmsallaşdırılması qaydasının təsdiq edilməsi barədə Azərbaycan Respublikasi Nazirlər Kabinetinin Qərarı https://e-qanun.az/framework/3947
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section__opinions pb-4 pb-md-5">
+	<div class="container px-3 px-md-0">
+		<form class="row py-4 mb-3 g-4 g-md-5">
+			<div class="col-12">
+				<h4 class="h4 fw-bold text__primary text-uppercase">HÜQUQİ RƏY BİLDİR</h4>
+			</div>
+			<div class="col-12 col-md-7">
+				<div class="card card__opinion border-0 mb-3">
+					<div class="card-header bg-transparent border-0 px-0">
+						<div class="d-flex align-items-center g-0">
+							<div class="profile__img me-3">
+								<img src="assets/images/testimonial1.png" alt="" />
+							</div>
+							<div class="profile__info">
+								<h5 class="h5 fw-semibold text__color mb-1">Guy Hawkins</h5>
+								<p class="body__text2 fw-medium text__grey mb-0">Marketing Coordinator</p>
+							</div>
+						</div>
+					</div>
+					<div class="card-body px-0 pt-2 pb-0">
+						<p class="body__text2 fw-normal text__gray-dark">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
+					</div>
+					<div class="card-footer bg-transparent border-0 py-0 px-0">
+						<ul class="list-group list-group-horizontal list-unstyled d-inline-flex align-items-start align-items-md-center w-100">
+							<li class="ms-2 me-4 ms-md-0 mb-0">
+								<a href="#" class="text-decoration-none body__text2 fw-bold text__color"> <i class="fas fa-reply me-1"></i> Reply </a>
+							</li>
+							<li class="me-4 mb-0">
+								<i class="fas fa-circle-small dot-icon text__color"></i>
+							</li>
+							<li class="ms-2 me-3 ms-md-0 mb-0">
+								<a href="#" class="text-decoration-none body__text2 fw-bold text__blue">Like </a>
+							</li>
+							<li class="mx-2 mb-0">
+								<span class="opinion__time fw-medium text__grey"> 24 min ago</span>
+							</li>
+							<li class="ms-auto me-0 mb-0">
+								<span class="opinion__likes fw-medium text__grey"> 33 like</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-7">
+				<div class="card card__opinion border-0 mb-3">
+					<div class="card-header bg-transparent border-0 px-0">
+						<div class="d-flex align-items-center g-0">
+							<div class="profile__img me-3">
+								<img src="assets/images/testimonial1.png" alt="" />
+							</div>
+							<div class="profile__info">
+								<h5 class="h5 fw-semibold text__color mb-1">Guy Hawkins</h5>
+								<p class="body__text2 fw-medium text__grey mb-0">Marketing Coordinator</p>
+							</div>
+						</div>
+					</div>
+					<div class="card-body px-0 pt-2 pb-0">
+						<p class="body__text2 fw-normal text__gray-dark">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
+					</div>
+					<div class="card-footer bg-transparent border-0 py-0 px-0">
+						<ul class="list-group list-group-horizontal list-unstyled d-inline-flex align-items-start align-items-md-center w-100">
+							<li class="ms-2 me-4 ms-md-0 mb-0">
+								<a href="#" class="text-decoration-none body__text2 fw-bold text__color"> <i class="fas fa-reply me-1"></i> Reply </a>
+							</li>
+							<li class="me-4 mb-0">
+								<i class="fas fa-circle-small dot-icon text__color"></i>
+							</li>
+							<li class="ms-2 me-3 ms-md-0 mb-0">
+								<a href="#" class="text-decoration-none body__text2 fw-bold text__blue">Like </a>
+							</li>
+							<li class="mx-2 mb-0">
+								<span class="opinion__time fw-medium text__grey"> 24 min ago</span>
+							</li>
+							<li class="ms-auto me-0 mb-0">
+								<span class="opinion__likes fw-medium text__grey"> 33 like</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-11 col-md-10 offset-1 offset-md-2 border-1 border-start border-color__light2">
+						<div class="card card__opinion opinion__child border-0 py-2 py-md-3 ps-3 rounded-0">
+							<div class="card-header bg-transparent border-0 px-0">
+								<div class="d-flex align-items-center g-0">
+									<div class="profile__img me-3">
+										<img src="assets/images/testimonial1.png" alt="" />
+									</div>
+									<div class="profile__info">
+										<h5 class="h5 fw-semibold text__color mb-1">Guy Hawkins</h5>
+										<p class="body__text2 fw-medium text__grey mb-0">Marketing Coordinator</p>
+									</div>
+								</div>
+							</div>
+							<div class="card-body px-0 pt-2 pb-0">
+								<p class="body__text2 fw-normal text__gray-dark">Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet..</p>
+							</div>
+							<div class="card-footer bg-transparent border-0 py-0 px-0">
+								<ul class="list-group list-group-horizontal list-unstyled d-inline-flex align-items-start align-items-md-center w-100">
+									<li class="ms-2 me-4 ms-md-0 mb-0">
+										<a href="#" class="text-decoration-none body__text2 fw-bold text__color"> <i class="fas fa-reply me-1"></i> Reply </a>
+									</li>
+									<li class="me-4 mb-0">
+										<i class="fas fa-circle-small dot-icon text__color"></i>
+									</li>
+									<li class="ms-2 me-3 ms-md-0 mb-0">
+										<a href="#" class="text-decoration-none body__text2 fw-bold text__blue">Like </a>
+									</li>
+									<li class="mx-2 mb-0">
+										<span class="opinion__time fw-medium text__grey"> 24 min ago</span>
+									</li>
+									<li class="ms-auto me-0 mb-0">
+										<span class="opinion__likes fw-medium text__grey"> 33 like</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="card card__opinion opinion__child border-0 py-2 py-md-3 ps-3 rounded-0">
+							<div class="card-header bg-transparent border-0 px-0">
+								<div class="d-flex align-items-center g-0">
+									<div class="profile__img me-3">
+										<img src="assets/images/testimonial1.png" alt="" />
+									</div>
+									<div class="profile__info">
+										<h5 class="h5 fw-semibold text__color mb-1">Guy Hawkins</h5>
+										<p class="body__text2 fw-medium text__grey mb-0">Marketing Coordinator</p>
+									</div>
+								</div>
+							</div>
+							<div class="card-body px-0 pt-2 pb-0">
+								<p class="body__text2 fw-normal text__gray-dark">Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet..</p>
+							</div>
+							<div class="card-footer bg-transparent border-0 py-0 px-0">
+								<ul class="list-group list-group-horizontal list-unstyled d-inline-flex align-items-start align-items-md-center w-100">
+									<li class="ms-2 me-4 ms-md-0 mb-0">
+										<a href="#" class="text-decoration-none body__text2 fw-bold text__color"> <i class="fas fa-reply me-1"></i> Reply </a>
+									</li>
+									<li class="me-4 mb-0">
+										<i class="fas fa-circle-small dot-icon text__color"></i>
+									</li>
+									<li class="ms-2 me-3 ms-md-0 mb-0">
+										<a href="#" class="text-decoration-none body__text2 fw-bold text__blue">Like </a>
+									</li>
+									<li class="mx-2 mb-0">
+										<span class="opinion__time fw-medium text__grey"> 24 min ago</span>
+									</li>
+									<li class="ms-auto me-0 mb-0">
+										<span class="opinion__likes fw-medium text__grey"> 33 like</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12">
+						<div class="input-group comment__box my-5">
+							<input type="text" class="form-control" placeholder="Comment" />
+							<a href="#" class="btn btn-emoji">
+								<i class="fal fa-smile"></i>
+							</a>
+							<a href="#" class="btn btn-primary btn-comment">
+								<span>Send</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</section>
+
+</main>
+
+		<!-- Footer -->
+		<footer class="footer mt-auto bg__primary z-1">
+			<div class="container"><div class="row footer__header">
+	<div class="col-12 col-sm-12 col-md-12 col-lg-8 px-3 px-md-0">
+		<ul class="list-group list-group-flush list-group-horizontal-lg flex-lg-wrap list-unstyled links__list body__text1 float-start">
+			<li><a href="#" class="text-decoration-none text__white">Haqqımızda</a></li>
+			<li><a href="#" class="text-decoration-none text__white">Kommentariyalar</a></li>
+			<li><a href="#" class="text-decoration-none text__white">Sual - cavab</a></li>
+			<li><a href="#" class="text-decoration-none text__white">Daxil ol</a></li>
+			<li><a href="#" class="text-decoration-none text__white">Qeydiyyat</a></li>
+			<li><a href="#" class="text-decoration-none text__white">Əlaqə</a></li>
+		</ul>
+	</div>
+
+	<div class="col-12 col-sm-12 col-md-12 col-lg-4 px-3 px-md-0 d-none d-md-none d-lg-flex justify-content-end">
+		<ul class="list-group list-group-horizontal list-unstyled terms__list body__text1 float-end">
+			<li><a href="#" class="text-decoration-none text__white">Terms & Conditions</a></li>
+			<li><a href="#" class="text-decoration-none text__white">Privacy Policy</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="row footer__body">
+	<div class="col-lg-4 d-flex align-items-center justify-content-start px-3 px-md-0">
+		<ul class="list-group-horizontal list-unstyled social__links d-none d-md-none d-lg-flex align-items-center">
+			<li class="nav-item">
+				<a class="nav-link" href="#">
+					<i class="fab fa-facebook"></i>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">
+					<i class="fab fa-twitter"></i>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">
+					<i class="fab fa-youtube"></i>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="col-6 col-lg-4 d-flex align-items-center justify-content-start justify-content-lg-center">
+		<img src="assets/images/logo-white.png" alt="" class="img-fluid" />
+	</div>
+
+	<div class="col-6 col-lg-4 d-flex align-items-center justify-content-end px-3 px-md-0">
+		<a href="#" class="btn btn-white text__primary fw-bold body__text1 border-radius__5">
+			<i class="far fa-crown me-2"></i>
+			<span>Abunə ol</span>
+		</a>
+	</div>
+</div>
+
+<div class="row d-flex d-lg-none py-4">
+	<div class="col-12 col-md-12 d-flex align-items-center justify-content-start px-3 px-md-0">
+		<ul class="list-group-horizontal list-unstyled social__links d-inline-flex justify-content-center align-items-center w-100">
+			<li class="nav-item">
+				<a class="nav-link" href="#">
+					<i class="fab fa-facebook"></i>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">
+					<i class="fab fa-twitter"></i>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">
+					<i class="fab fa-youtube"></i>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="col-12 col-sm-12 col-md-12 col-lg-4 px-3 px-md-0 pt-3 pb-3">
+		<ul class="list-group list-group-horizontal list-unstyled terms__list body__text1 text-center justify-content-center">
+			<li><a href="#" class="text-decoration-none text__white">Terms & Conditions</a></li>
+			<li><a href="#" class="text-decoration-none text__white">Privacy Policy</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="row footer__foot">
+	<div class="col-12 col-md-12 d-flex justify-content-center justify-content-md-start align-items-center px-3 px-md-0">
+		<a href="#" class="rights__text text__white text-decoration-none mb-0 me-2">
+			© 2023 All Rights Reserved. Developed by
+			<picture class="ms-2">
+				<source srcset="assets/images/era-logo-white.svg" type="image/svg+xml" />
+				<img src="assets/images/era-logo-white.svg" class="img-fluid" alt="..." />
+			</picture>
+		</a>
+	</div>
+</div>
+</div>
+		</footer>
+
+		<!-- JS-Assets -->
+		<script src="assets/plugins/jquery/jquery.min.js?_v=20231001002912"></script>
+		<!-- Bootstrap -->
+		<script src="assets/plugins/bootstrap/js/popper.min.js?_v=20231001002912"></script>
+		<script src="assets/plugins/bootstrap/js/bootstrap.min.js?_v=20231001002912"></script>
+		<!-- Select2 -->
+		<script src="assets/plugins/select2/select2.min.js?_v=20231001002912"></script>
+		<script src="assets/plugins/select2/select2.settings.js?_v=20231001002912"></script>
+		<!-- Swiper -->
+		<script src="assets/plugins/swiper/swiper.min.js?_v=20231001002912"></script>
+		<script src="assets/plugins/swiper/swiper-settings.js?_v=20231001002912"></script>
+		<script src="assets/plugins/custom.js?_v=20231001002912"></script>
+	</body>
+</html>

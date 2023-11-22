@@ -1,0 +1,50 @@
+@import url("/assets/plugins/fontawesome/css/all.min.css");
+@import "vars";
+@import "mixins";
+@import "fonts";
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html {
+	overflow-x: hidden;
+}
+
+body {
+	font-family: $font_family;
+	font-style: normal;
+	font-variant-numeric: lining-nums proportional-nums;
+	background: $white;
+
+	&.no-scroll {
+		overflow-y: auto;
+	}
+}
+
+.main {
+	width: 100%;
+}
+
+@include cursor-class(pointer);
+
+// /* Blocks */
+@import "blocks/font-style";
+@import "blocks/theme-style";
+@import "blocks/humburger-icon";
+@import "blocks/borders";
+@import "blocks/breadcrumbs";
+@import "blocks/forms";
+@import "blocks/buttons";
+@import "blocks/utilities";
+@import "blocks/sections";
+@import "blocks/navbar";
+@import "blocks/jumbotron";
+@import "blocks/main";
+@import "blocks/content";
+@import "blocks/cards";
+@import "blocks/profile";
+@import "blocks/pagination";
+@import "blocks/footer";

@@ -1,0 +1,41 @@
+.section__registration {
+	.card {
+		img {
+			object-position: center;
+			width: 100%;
+			height: auto;
+			max-height: 445px;
+			@include transform(scale(1));
+			@include transition(all 0.5s);
+		}
+
+		&:hover {
+			img {
+				@include transform(scale(1.2));
+				@include transition(all 0.5s);
+			}
+		}
+	}
+
+	.col {
+		.btn {
+			width: 100%;
+			min-width: 180px;
+
+			@include breakpoint($sm-bp) {
+				width: 100%;
+				max-width: 100%;
+				min-width: 100%;
+			}
+		}
+	}
+}
+
+.card__jumbotron {
+	img {
+		object-position: center;
+		width: 100%;
+		height: auto;
+		max-height: 150px;
+	}
+}

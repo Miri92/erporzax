@@ -1,0 +1,59 @@
+.statistic__item {
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	background-color: $grey_5;
+
+	@include breakpoint($sm-bp) {
+		padding: 10px;
+		min-height: 90px;
+	}
+
+	&.hover__secondary {
+		background-color: var(--secondary-color);
+		@include transition(all 0.5s);
+
+		&:hover {
+			background-color: var(--secondary-color-light);
+			@include transition(all 0.5s);
+		}
+		&:focus {
+			background-color: var(--secondary-color-dark);
+			@include transition(all 0.5s);
+		}
+	}
+
+	.item-icon {
+		width: 86px;
+		height: 86px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-right: 20px;
+
+		@include breakpoint($sm-bp) {
+			width: 100%;
+			height: 100%;
+			margin-right: 10px;
+			max-width: 50px;
+			max-height: 50px;
+		}
+
+		i {
+			font-size: 30px;
+
+			@include breakpoint($sm-bp) {
+				font-size: 24px;
+			}
+		}
+	}
+
+	.item-info {
+		.body__text1 {
+			@include breakpoint($sm-bp) {
+				font-size: 12px !important;
+				line-height: normal !important;
+			}
+		}
+	}
+}

@@ -49,7 +49,7 @@ class MenuController extends Controller
 
 
         return redirect()->back()
-            ->withSuccess('Kontent əlavə edildi');
+            ->withSuccess('Kontent yeniləndi');
 
     }
 
@@ -57,7 +57,7 @@ class MenuController extends Controller
         //new 1 olarsa id string gelir
         foreach ($menuArrList as $item){
             $item->parent_id = $parentId;
-            if ($item->deleted === 1){
+            if ($item->deleted == 1){
                 $this->deleteItem($item);
                 continue;
             }
@@ -114,7 +114,7 @@ class MenuController extends Controller
         ]);
 
         Menu::query()
-            ->where('id','=',$item)
+            ->where('id','=',$item->id)
             ->delete();
     }
 

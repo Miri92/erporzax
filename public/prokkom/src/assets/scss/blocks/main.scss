@@ -1,0 +1,120 @@
+// .section__sponsors {
+// 	@include breakpoint($sm-bp) {
+// 		border-radius: 0 !important;
+// 	}
+// }
+
+.section__testimonials {
+	position: relative;
+
+	@include breakpoint($sm-bp) {
+		border-radius: 0 !important;
+	}
+
+	.swiper-container {
+		padding: calculateRem(70px) 0 0 0;
+	}
+
+	.swiper__nav {
+		.swiper-button-next {
+			background-image: none;
+		}
+
+		.swiper-button-prev {
+			background-image: none;
+		}
+
+		.btn__next {
+			width: 24px;
+			height: 24px;
+			color: var(--grey-color1);
+			font-size: 24px;
+			margin-left: 10px;
+			margin-right: 0;
+			left: auto;
+			right: 0;
+			@include transition(all 0.5s);
+
+			&:hover {
+				background: transparent;
+				background-color: transparent;
+				color: white;
+				@include transition(all 0.5s);
+			}
+		}
+
+		.btn__prev {
+			width: 24px;
+			height: 24px;
+			color: var(--grey-color1);
+			font-size: 24px;
+			margin-left: auto;
+			margin-right: 48px;
+			left: auto;
+			right: 20%;
+			@include transform(translateX(-20%));
+			@include transition(all 0.5s);
+
+			@include breakpoint($sm-bp) {
+				margin-right: 30px;
+			}
+
+			&:hover {
+				background: transparent;
+				background-color: transparent;
+				color: white;
+				@include transition(all 0.5s);
+			}
+		}
+	}
+
+	.swiper-scrollbar {
+		position: absolute;
+		left: var(--swiper-scrollbar-sides-offset, 1%);
+		bottom: var(--swiper-scrollbar-bottom, 4px);
+		top: var(--swiper-scrollbar-top, auto);
+		z-index: 50;
+		height: var(--swiper-scrollbar-size, 4px);
+		width: calc(100% - 2 * var(--swiper-scrollbar-sides-offset, 1%));
+	}
+
+	// &.swiper-container-horizontal {
+	// 	> .swiper-scrollbar {
+	// 		position: absolute;
+	// 		left: 1%;
+	// 		bottom: 3px;
+	// 		z-index: 50;
+	// 		height: 5px;
+	// 		width: 98%;
+	// 	}
+	// }
+
+	// &.swiper-container-vertical {
+	// 	> .swiper-scrollbar {
+	// 		position: absolute;
+	// 		right: 3px;
+	// 		top: 1%;
+	// 		z-index: 50;
+	// 		width: 5px;
+	// 		height: 98%;
+	// 	}
+	// }
+
+	// .swiper-scrollbar-drag {
+	// 	height: 100%;
+	// 	width: 100%;
+	// 	position: relative;
+	// 	background: var(--grey-color1);
+	// 	border-radius: 10px;
+	// 	left: 0;
+	// 	top: 0;
+	// }
+}
+
+// .swiper-scrollbar-cursor-drag {
+// 	cursor: move
+// }
+
+// .swiper-scrollbar-lock {
+// 	display: none
+// }

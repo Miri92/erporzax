@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+	<head>
+		{{> header }}
+	</head>
+	<body class="d-flex flex-column h-100">
+		<!-- Header -->
+
+		<header class="header fixed-top" id="header-main">
+			<nav class="navbar navbar-main navbar-expand-lg navbar-white navbar-light navbar-sticky" id="navbar-main">
+				<div class="container px-0 px-lg-0">{{> navbar }}</div>
+			</nav>
+		</header>
+
+		<!-- Main -->
+		<main class="main flex-shrink-0 w-100">{{> body }}</main>
+
+		<!-- Footer -->
+		<footer class="footer mt-auto bg__primary z-1">
+			<div class="container">{{> footer }}</div>
+		</footer>
+
+		<!-- JS-Assets -->
+		{{> js-assets }}
+	</body>
+</html>

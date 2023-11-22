@@ -1,0 +1,49 @@
+
+.event__info {
+	.event-title,
+	.event-location {
+		font-size: calculateRem(22px);
+		line-height: calculateRem(32px);
+	
+	}
+}
+
+.atcb__top {
+	&.addeventatc {
+		background: var(--dark-color);
+		border-radius: 50%;
+		width: 36px;
+		height: 36px;
+		line-height: 36px;
+		box-shadow: none !important;
+
+		i {
+			color: #fff !important;
+			font-size: 16px;
+		}
+
+		.addeventatc_dropdown {
+			top: 0 !important;
+		}
+
+		.copyx {
+			display: none;
+		}
+	}
+}
+
+.location__link {
+	display: inline-block;
+	position: relative;
+	background: var(--dark-color);
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+
+	i {
+		color: #fff !important;
+		font-size: 16px;
+	}
+}

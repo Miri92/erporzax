@@ -1,0 +1,153 @@
+/* ==== Media breakpoints ==== */
+
+$xl-bp: 1200px;
+$lg-bp: 992px;
+$md-bp: 768px;
+$sm-bp: 575px;
+$xs-bp: 355px;
+
+/* ==== Colors and effects ==== */
+
+$primary_color: rgba(88, 140, 126, 1);
+$primary_color_dark: rgba(72, 115, 103, 1);
+$primary_color_light: rgba(112, 178, 161, 1);
+
+$text_color: rgba(14, 24, 38, 1);
+
+$secondary_color: rgba(251, 114, 101, 1);
+$secondary_color_dark: rgb(241, 85, 71);
+$secondary_color_light: rgb(255, 157, 148);
+
+/* Color styles */
+
+$grey_1: rgba(169, 169, 169, 1);
+$grey_2: rgba(192, 192, 192, 1);
+$grey_3: rgba(205, 205, 205, 1);
+$grey_4: rgba(217, 217, 217, 1);
+$grey_5: rgba(237, 237, 237, 1);
+$grey_6: rgba(247, 247, 247, 1);
+$grey_7: rgba(255, 255, 255, 1);
+
+
+// Some advanced colors
+
+$white: rgba(255, 255, 255, 1);
+$black: rgba(0, 0, 0, 1);
+$grey: rgba(137, 138, 141, 1);
+$grey_dark: rgba(71, 71, 71, 1);
+$dark: rgba(14, 24, 38, 1);
+$blue: rgba(61, 142, 255, 1);
+
+:root {
+	--main-color: #{$primary_color};
+	--primary-color: #{$primary_color};
+	--primary-color-dark: #{$primary_color_dark};
+	--primary-color-light: #{$primary_color_light};
+	--secondary-color: #{$secondary_color};
+	--secondary-color-dark: #{$secondary_color_dark};
+	--secondary-color-light: #{$secondary_color_light};
+	--third-color: #{$secondary_color};
+	--text-color: #{$dark};
+	--blue-color: #{$blue};
+	--white-color: #{$white};
+	--black-color: #{$black};
+	--dark-color: #{$dark};
+	--grey-color-dark: #{$grey_dark};
+	--grey-color: #{$grey};
+	--grey-color1: #{$grey_1};
+	--grey-color2: #{$grey_2};
+	--grey-color3: #{$grey_3};
+	--grey-color4: #{$grey_4};
+	--grey-color5: #{$grey_5};
+	--grey-color6: #{$grey_6};
+	--grey-color7: #{$grey_7};
+}
+
+/* ==== Fonts ==== */
+
+$font_family: 'Raleway', sans-serif;
+$font_awesome: 'Font Awesome 6 Pro';
+$font-size-base: 16px;
+$line-height-base: 1.5;
+
+// == Desktop font style ==
+
+// -- Headers' titles --
+$h1_fs_desktop: 32px;
+$h2_fs_desktop: 28px;
+$h3_fs_desktop: 24px;
+$h4_fs_desktop: 20px;
+$h5_fs_desktop: 18px;
+$h6_fs_desktop: 16px;
+
+// -- Paragraphs' titles --
+
+$subtitle_fs_desktop: 16px;
+
+$text1_fs_desktop: 16px;
+$text2_fs_desktop: 14px;
+$text3_fs_desktop: 12px;
+
+// == Mobile font style ==
+
+// $h1_fs_mobile: 22px;
+// $h1_fw_mobile: 700;
+// $h1_lh_mobile: 30px;
+
+// $h2_fs_mobile: 20px;
+// $h2_fw_mobile: 700;
+// $h2_lh_mobile: 26px;
+
+// $h3_fs_mobile: 16px;
+// $h3_fw_mobile: 700;
+// $h3_lh_mobile: 24px;
+
+// $h4_fs_mobile: 14px;
+// $h4_fw_mobile: 700;
+// $h4_lh_mobile: 22px;
+
+// $h5_fs_mobile: 12px;
+// $h5_fw_mobile: 700;
+// $h5_lh_mobile: 18px;
+
+// $h6_fs_mobile: 10px;
+// $h6_fw_mobile: 700;
+// $h6_lh_mobile: 16px;
+
+// -- Paragraphs' titles --
+
+// Subheaders' titles
+// $subh1_fs: 1rem;
+// $subh1_fw: 600;
+// $subh1_lh: 24px;
+
+// $subtitle_fs_mobile: 12px;
+// $subtitle_fw_mobile: 0;
+// $subtitle_lh_mobile: 18px;
+
+// $text1_fs_mobile: 14px;
+// $text1_fw_mobile: 0;
+// $text1_lh_mobile: 22px;
+
+// $text2_fs_mobile: 13px;
+// $text2_fw_mobile: 0;
+// $text2_lh_mobile: 22px;
+
+// $text3_fs_mobile: 12px;
+// $text3_fw_mobile: 0;
+// $text3_lh_mobile: 20px;
+
+// $text4_fs_mobile: 10px;
+// $text4_fw_mobile: 0;
+// $text4_lh_mobile: 16px;
+
+/* ==== Inputs style ==== */
+
+$input_paddings: 10px 16px !important;
+$input_width: 250px !important;
+$input_height: 40px !important;
+$input_text_color: $black !important;
+$input_radius: 6px !important;
+$input_border: none !important;
+$input_placeholder_color: #b8b8b8 !important;
+$input_background_color: $white !important;

@@ -1,7 +1,13 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
+//use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Front\Profile\ProfileController;
+use App\Http\Controllers\Front\FaqController;
+use App\Http\Controllers\Front\HomeController;
+use App\Http\Controllers\Front\ContactController;
+use App\Http\Controllers\Front\ParagraphController;
+use App\Http\Controllers\Front\LawCommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,18 +20,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/law-comments', [LawCommentController::class, 'index'])->name('law_comments');
+Route::get('/law-comments/{id}', [LawCommentController::class, 'show'])->name('law_comments.show');
+Route::get('/paragraph/{id}', [ParagraphController::class, 'show'])->name('paragraph.show');
+Route::get('/faq', [FaqController::class, 'index'])->name('faq.index');
+Route::get('/contact-us', [ContactController::class, 'index'])->name('contact.index');
+
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+    //Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
 require __DIR__.'/auth.php';

@@ -1,0 +1,55 @@
+---
+layout: default
+title: Comment page
+---
+
+<section class="section__header pt-5 mt-5">
+	<div class="bg__gray-light">
+		<div class="container">
+			<div class="row g-0">
+				<div class="col-12 px-3 px-md-0">{{> breadcrumbs }}</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="px-4 py-4 my-4 text-center">
+					<h4 class="h4 fw-bold text-uppercase text__primary mb-0">KOMMENTARİYALAR</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section__comments bg__gray-light py-5">
+	<div class="container">
+		<form class="row g-3">
+			<div class="col-12 col-md-8 mx-auto">
+				<div class="input-group search__box mb-5">
+					<input type="text" class="form-control" placeholder="Search..." />
+					<a href="#" class="btn btn-white btn-search">
+						<i class="fa fa-search me-2"></i>
+						<span>Axtar</span>
+					</a>
+				</div>
+			</div>
+			<div class="col-12 col-md-8 mx-auto">
+				<a href="#" class="btn btn__comment text-decoration-none text-start justify-content-between align-items-baseline mw-100 mh-100 h-100 w-100">
+					<span>Azərbaycan Respublikasının Əmək Məcəlləsində dəyişiklik edilməsi haqqında</span>
+					<i class="far fa-chevron-right ms-5"></i>
+				</a>
+			</div>
+			<div class="col-12 col-md-8 mx-auto">
+				<a href="#" class="btn btn__comment has-comment text-decoration-none text-start justify-content-between align-items-baseline mw-100 mh-100 h-100 w-100">
+					<span>“Saxta əmtəə nişanlarının və coğrafi göstəricilərin istifadəsinin qabaqlanması və qarşısının alınması üzrə MDB iştirakçısı dövlətlərinin əməkdaşlığı haqqında Saziş”in təsdiqi və “Müstəqil Dövlətlər Birliyinin Hökumət Başçıları Şurasının iclasında Azərbaycan Respublikasının Hökuməti adından imzalanmış “Yalançı əmtəə nişanlarından və coğrafi göstəricilərdən istifadənin qarşısının alınması və kökünün kəsilməsi tədbirləri haqqında” Sazişin təsdiq edilməsi barədə” Azərbaycan Respublikası Qanununun ləğv edilməsi haqqında </span>
+					<i class="far fa-chevron-right ms-5"></i>
+				</a>
+			</div>
+		</form>
+
+		<div class="row mt-3">
+			<div class="col-12 col-md-6 mx-auto">{{> pagination }}</div>
+		</div>
+	</div>
+</section>
