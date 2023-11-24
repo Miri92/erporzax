@@ -11,7 +11,7 @@
     <section class="section__jumborton position-relative overflow-hidden">
         <div class="container-fluid">
             <div class="row background-img cover d-flex justify-content-start align-items-end h-100"
-                 style="background-image: url({{ asset('/prokkom/dist/assets/images/bg1.png')}})">
+                 style="background-image: url('{{ asset(url('/uploads/'.$slider->photo))}}')">
                 <div class="col-12">
                     <div class="position-relative">
                         <div class="container">
@@ -89,7 +89,7 @@
                                     <div class="swiper-slide">
                                         <a href="#" class="card card__testimonial text-decoration-none h-100">
                                             <div class="card-body pt-5">
-                                                <div class="avatar"><img src="{{asset($testimonial->photo)}}"></div>
+                                                <div class="avatar"><img src="{{asset('/uploads/'.$testimonial->photo)}}"></div>
                                                 <h6 class="h6 fw-semibold text__color mt-4 mb-1">{{$testimonial->full_name}}</h6>
                                                 <p class="body__text3 fw-medium text__gray-dark">{{$testimonial->position}}</p>
                                                 <p class="body__text2 fw-normal text__gray-dark">{{$testimonial->body}}</p>

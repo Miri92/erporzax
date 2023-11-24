@@ -25,7 +25,8 @@ class HomeController extends Controller
 //        dd(Artisan::output());
 
         $slider = Slider::query()->first();
-        $testimonials = Testimonial::query()->latest()->limit(10)->get();
+        $testimonials = Testimonial::query()->latest()->limit(5)->get();
+
 
         //dd($slider);
 

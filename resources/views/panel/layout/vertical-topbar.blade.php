@@ -38,6 +38,18 @@
 
         <div class="d-flex">
 
+            <div class="d-inline-block">
+                <a href="{{ url(('/')) }}"
+                   target="_blank"
+                   class="btn header-item"
+                   id="right-bar-toggle"
+                   data-bs-toggle="tooltip"
+                   data-bs-placement="bottom"
+                   data-bs-original-title="View site"
+                style="line-height: 55px;font-size: 24px;">
+                    <i class="mdi mdi-home-export-outline"></i>
+                </a>
+            </div>
 
 
             <div class="dropdown d-inline-block">
