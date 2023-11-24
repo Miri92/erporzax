@@ -70,7 +70,7 @@
                                                 <a href="{{ url($row->photo) }}">
                                                     <img class="img-thumbnail"
                                                          style="max-width: 150px"
-                                                         src="{{ url($row->photo) }}" alt="">
+                                                         src="{{ url('uploads/'.$row->photo) }}" alt="">
                                                 </a>
                                             </td>
                                             <td>{{$row->order}}</td>

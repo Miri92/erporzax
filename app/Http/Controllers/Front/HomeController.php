@@ -12,11 +12,17 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Validator;
 class HomeController extends Controller
 {
 
     public function index(Request $request){
+
+//        dd(storage_path('app/public'));
+
+//        Artisan::call('storage:link');
+//        dd(Artisan::output());
 
         $slider = Slider::query()->first();
         $testimonials = Testimonial::query()->latest()->limit(10)->get();

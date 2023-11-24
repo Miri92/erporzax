@@ -31,7 +31,7 @@ class DocService
     public function parse(): void
     {
         //isleyir
-        $source    = public_path('storage/'.  $this->path);
+        $source    = public_path('uploads/'.  $this->path);
         //dd($source);
 
         //dd($source);

@@ -35,7 +35,7 @@ class TestimonialController extends Controller
 
     public function store(Request $request){
 
-        //dd($request->all());
+        dd($request->all());
         $request->validate($this->rules);
 
         $arrCreate = [];
@@ -95,7 +95,7 @@ class TestimonialController extends Controller
             if ($request->file('photo')->isValid()) {
 
                 $makedName = $request->title . time();
-                $path = $request->file('photo')->storeAs('slider', $makedName . '.jpg', 'public');
+                $path = $request->file('photo')->storeAs('testimonials', $makedName . '.jpg', 'public');
                 //Image::make(Storage::disk('public')->path($path))->fit(918, 504)->save(null, 100);
                 $arrCreate['photo'] = $path;
 

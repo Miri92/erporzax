@@ -72,10 +72,10 @@
                                        class="form-control form-control-md" id="avatar" type="file">
                                 @if($user->avatar)
                                     <p>
-                                        <a href="{{ url($user->avatar) }}">
+                                        <a href="{{ url('uploads/'.$user->avatar) }}">
                                             <img class="img-thumbnail"
                                                  style="max-width: 150px"
-                                                 src="{{ url($user->avatar) }}" alt="">
+                                                 src="{{ url('uploads/'.$user->avatar) }}" alt="">
                                         </a>
                                     </p>
                                 @endif

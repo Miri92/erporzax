@@ -5,7 +5,7 @@ namespace App\Providers;
 use App;
 
 use App\Models\Menu;
-use App\Models\options;
+use App\Models\Options;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 

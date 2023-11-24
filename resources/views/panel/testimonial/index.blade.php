@@ -67,10 +67,10 @@
                                             <td>{{$row->title}}</td>
                                             <td>
 
-                                                <a href="{{ url($row->photo) }}">
+                                                <a href="{{ url('uploads/'.$row->photo) }}">
                                                     <img class="img-thumbnail"
                                                          style="max-width: 150px"
-                                                         src="{{ url($row->photo) }}" alt="">
+                                                         src="{{ url('uploads/'.$row->photo) }}" alt="">
                                                 </a>
                                             </td>
                                             <td>{{$row->order}}</td>

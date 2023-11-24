@@ -22,7 +22,7 @@ use App\Http\Controllers\Panel\TestimonialController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 
 Route::middleware([AuthenticateAdmin::class])->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');

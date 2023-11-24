@@ -12,6 +12,9 @@ class AuthenticateAdmin extends Middleware
      */
     protected function redirectTo(Request $request): ?string
     {
+
+        //dd(route('panel.login'));
+
         return $request->expectsJson() ? null : route('panel.login');
     }
 }

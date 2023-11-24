@@ -31,7 +31,7 @@
                                     <td>
 
                                         @if($user)
-                                            <img src="{{asset($user->avatar)}}"
+                                            <img src="{{asset('uploads/'.$user->avatar)}}"
                                                  alt=""
                                                  class="avatar-sm rounded-circle me-2">
                                         @else

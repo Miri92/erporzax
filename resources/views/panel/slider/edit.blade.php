@@ -62,10 +62,10 @@
                                        class="form-control form-control-md" id="photo" type="file">
                                 @if($row->photo)
                                 <p>
-                                    <a href="{{ url($row->photo) }}">
+                                    <a href="{{ url('uploads/'.$row->photo) }}">
                                         <img class="img-thumbnail"
                                              style="max-width: 150px"
-                                             src="{{ url($row->photo) }}" alt="">
+                                             src="{{ url('uploads/'.$row->photo) }}" alt="">
                                     </a>
                                 </p>
                                 @endif

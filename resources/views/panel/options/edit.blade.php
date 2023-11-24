@@ -127,10 +127,10 @@
                                        type="file">
                                 @if($row->favicon)
                                     <p>
-                                        <a href="{{ url($row->favicon) }}">
+                                        <a href="{{ url('uploads/'.$row->favicon) }}">
                                             <img class="img-thumbnail"
                                                  style="max-width: 150px"
-                                                 src="{{ url($row->favicon) }}" alt="">
+                                                 src="{{ url('uploads/'.$row->favicon) }}" alt="">
                                         </a>
                                     </p>
                                 @endif
@@ -146,10 +146,10 @@
                                        type="file">
                                 @if($row->logo)
                                     <p>
-                                        <a href="{{ url($row->logo) }}">
+                                        <a href="{{ url('uploads/'.$row->logo) }}">
                                             <img class="img-thumbnail  mt-2"
                                                  style="max-width: 150px"
-                                                 src="{{ url($row->logo) }}" alt="">
+                                                 src="{{ url('uploads/'.$row->logo) }}" alt="">
                                         </a>
                                     </p>
                                 @endif
@@ -165,10 +165,10 @@
                                        type="file">
                                 @if($row->logo_white)
                                     <p class="">
-                                        <a href="{{ url($row->logo_white) }}">
+                                        <a href="{{ url('uploads/'.$row->logo_white) }}">
                                             <img class="img-thumbnail"
                                                  style="max-width: 150px"
-                                                 src="{{ url($row->logo_white) }}" alt="">
+                                                 src="{{ url('uploads/'.$row->logo_white) }}" alt="">
                                         </a>
                                     </p>
                                 @endif
@@ -184,10 +184,10 @@
                                        type="file">
                                 @if($row->logo_social_share)
                                     <p class="">
-                                        <a href="{{ url($row->logo_social_share) }}">
+                                        <a href="{{ url('uploads/'.$row->logo_social_share) }}">
                                             <img class="img-thumbnail"
                                                  style="max-width: 150px"
-                                                 src="{{ url($row->logo_social_share) }}" alt="">
+                                                 src="{{ url('uploads/'.$row->logo_social_share) }}" alt="">
                                         </a>
                                     </p>
                                 @endif

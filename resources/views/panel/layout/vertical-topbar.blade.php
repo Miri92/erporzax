@@ -52,7 +52,7 @@
 
                     @if(Auth::user()->avatar)
                         <img class="rounded-circle header-profile-user"
-                             src="{{ asset(Auth::user()->avatar) }}"
+                             src="{{ asset('uploads/'.Auth::user()->avatar) }}"
                          alt="Header Avatar">
                     @else
                         <img class="rounded-circle header-profile-user"

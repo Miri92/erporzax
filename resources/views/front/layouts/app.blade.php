@@ -33,7 +33,7 @@
             <a class="navbar-brand mx-auto ms-lg-0" href="{{ url('/') }}">
 
 
-                <img alt="Image placeholder" src="{{asset($options->logo)}}" class="img-fluid navbar-brand-img" />
+                <img alt="Image placeholder" src="{{url('uploads/'.$options->logo)}}" class="img-fluid navbar-brand-img" />
             </a>
             <!-- Navbar collapse trigger -->
             <a class="navbar-toggler border-0 me-2" data-bs-toggle="collapse" data-bs-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,7 +71,7 @@
                             <div class="profile__img profile__link">
                                 @if(Auth::user()->avatar)
                                     <img class="rounded-circle header-profile-user"
-                                         src="{{ asset(Auth::user()->avatar) }}"
+                                         src="{{ url('uploads/'.Auth::user()->avatar) }}"
                                          alt="Header Avatar">
                                 @else
                                     <img class="rounded-circle header-profile-user"
