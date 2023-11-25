@@ -35,7 +35,6 @@ class TestimonialController extends Controller
 
     public function store(Request $request){
 
-        dd($request->all());
         $request->validate($this->rules);
 
         $arrCreate = [];

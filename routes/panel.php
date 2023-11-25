@@ -6,6 +6,7 @@ use App\Http\Controllers\Panel\MenuController;
 use App\Http\Controllers\Panel\UserController;
 use App\Http\Controllers\Panel\SliderController;
 use App\Http\Controllers\Panel\OptionsController;
+use App\Http\Controllers\Panel\QuestionController;
 use App\Http\Controllers\Panel\DashboardController;
 use App\Http\Controllers\Panel\DocController;
 use App\Http\Controllers\Panel\SocialIconController;
@@ -94,6 +95,17 @@ Route::middleware([AuthenticateAdmin::class])->group(function () {
         ->name('options.')->group(function () {
             Route::get('/edit/{options}', 'edit')->name('edit');
             Route::post('/edit/{options}', 'update')->name('update');
+        });
+
+    Route::controller(QuestionController::class)
+        ->prefix('question')
+        ->name('question.')->group(function () {
+            Route::get('/index', 'index')->name('index');
+            Route::get('/create', 'create')->name('create');
+            Route::post('/create', 'store')->name('store');
+            Route::get('/edit/{question}', 'edit')->name('edit');
+            Route::post('/edit/{question}', 'update')->name('update');
+            Route::post('/delete/{social_icon}', 'delete')->name('delete');
         });
 });
 

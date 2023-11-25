@@ -36,6 +36,13 @@
             </li>
 
             <li>
+                <a href="{{ route('panel.question.index') }}">
+                    <i class="icon nav-icon" data-eva="message-square-outline"></i>
+                    <span class="menu-item" data-key="t-calendar">FAQ</span>
+                </a>
+            </li>
+
+            <li>
                 <a href="{{ route('panel.testimonial.index') }}">
                     <i class="icon nav-icon" data-eva="message-square-outline"></i>
                     <span class="menu-item" data-key="t-calendar">Testimonials</span>
