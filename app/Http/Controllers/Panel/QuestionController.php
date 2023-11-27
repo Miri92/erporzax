@@ -19,7 +19,7 @@ class QuestionController extends Controller
     public function __construct(){
         $this->rules = [
             'question' => 'required',
-            'answer' => 'required'
+            //'answer' => 'required'
         ];
     }
     public function index(Request $request){
@@ -36,7 +36,6 @@ class QuestionController extends Controller
 
         $request->validate($this->rules);
 
-        //dd($request->sorting);
 
 
         Question::create([
@@ -63,6 +62,7 @@ class QuestionController extends Controller
     }
 
     public function update(Request $request, $id){
+       // dd($request->all());
 
         $request->validate($this->rules);
 

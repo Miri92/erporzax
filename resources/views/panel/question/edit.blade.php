@@ -30,13 +30,16 @@
 
 
                         <div class="mb-3 row">
-                            <label for="answer" class="col-md-2 col-form-label">Answer</label>
+                            <label for="ckeditor-classic" class="col-md-2 col-form-label">Answer</label>
                             <div class="col-md-10">
                             <textarea
                                 name="answer"
                                 class="form-control"
-                                id="body">{{ $row->answer }}</textarea>
+                                id="ckeditor-classic">{{ $row->answer }}</textarea>
+
                             </div>
+
+
                         </div>
 
                         <div class="mb-3 row">
@@ -65,5 +68,11 @@
 
         </div>
     </div>
+
+@endsection
+
+@section('footer-js')
+    <script src="{{ asset('/panel/borex/assets/libs/@ckeditor/ckeditor5-build-classic/build/ckeditor.js') }}"></script>
+    <script src="{{ asset('/panel/borex/assets/js/pages/form-editor.init.js') }}"></script>
 
 @endsection

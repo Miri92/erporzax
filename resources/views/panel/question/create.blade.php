@@ -32,10 +32,10 @@
                         <div class="mb-3 row">
                             <label for="answer" class="col-md-2 col-form-label">Answer</label>
                             <div class="col-md-10">
-                            <textarea
-                                name="answer"
-                                class="form-control"
-                                id="body">{{ old('answer') }}</textarea>
+                                <textarea
+                                    name="answer"
+                                    class="form-control"
+                                    id="ckeditor-classic">{{ old('answer') }}</textarea>
                             </div>
                         </div>
 
@@ -65,5 +65,10 @@
 
         </div>
     </div>
+
+@endsection
+@section('footer-js')
+    <script src="{{ asset('/panel/borex/assets/libs/@ckeditor/ckeditor5-build-classic/build/ckeditor.js') }}"></script>
+    <script src="{{ asset('/panel/borex/assets/js/pages/form-editor.init.js') }}"></script>
 
 @endsection

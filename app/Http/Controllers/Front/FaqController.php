@@ -15,9 +15,10 @@ class FaqController extends Controller
 
     public function index(Request $request){
 
-        //$questions = Question::orderBy('sorting')->get();
+        $questions = Question::orderBy('sorting')->paginate(20);
+        //dd($questions);
 
-        return view('front.faq.index');
+        return view('front.faq.index', compact('questions'));
 
     }
 
