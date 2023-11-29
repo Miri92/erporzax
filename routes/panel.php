@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\AuthenticateAdmin;
 use App\Http\Controllers\Panel\MenuController;
 use App\Http\Controllers\Panel\UserController;
+use App\Http\Controllers\Panel\PageController;
 use App\Http\Controllers\Panel\SliderController;
 use App\Http\Controllers\Panel\OptionsController;
 use App\Http\Controllers\Panel\QuestionController;
@@ -106,6 +107,17 @@ Route::middleware([AuthenticateAdmin::class])->group(function () {
             Route::get('/edit/{question}', 'edit')->name('edit');
             Route::post('/edit/{question}', 'update')->name('update');
             Route::post('/delete/{social_icon}', 'delete')->name('delete');
+        });
+
+    Route::controller(PageController::class)
+        ->prefix('pages')
+        ->name('pages.')->group(function () {
+            Route::get('/', 'index')->name('index');
+            Route::get('/create', 'create')->name('create');
+            Route::post('/store', 'store')->name('store');
+            Route::get('/edit/{slider}', 'edit')->name('edit');
+            Route::post('/edit/{slider}', 'update')->name('update');
+            Route::post('/delete/{slider}', 'delete')->name('delete');
         });
 });
 

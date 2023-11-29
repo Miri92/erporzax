@@ -37,7 +37,7 @@
 
             <li>
                 <a href="{{ route('panel.question.index') }}">
-                    <i class="icon nav-icon" data-eva="message-square-outline"></i>
+                    <i class="fas fa-question-circle"></i>
                     <span class="menu-item" data-key="t-calendar">FAQ</span>
                 </a>
             </li>
@@ -53,6 +53,13 @@
                 <a href="{{ route('panel.user.index') }}">
                     <i class="icon nav-icon" data-eva="person-outline"></i>
                     <span class="menu-item" data-key="t-calendar">Users</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ route('panel.pages.index') }}">
+                    <i class="mdi mdi-book-open-page-variant"></i>
+                    <span class="menu-item" data-key="t-calendar">Pages</span>
                 </a>
             </li>
 

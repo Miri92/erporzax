@@ -2,6 +2,7 @@
 
 //use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Front\PageController;
 use App\Http\Controllers\Front\Profile\ProfileController;
 use App\Http\Controllers\Front\FaqController;
 use App\Http\Controllers\Front\HomeController;
@@ -26,6 +27,7 @@ Route::get('/law-comments/{id}', [LawCommentController::class, 'show'])->name('l
 Route::get('/paragraph/{id}', [ParagraphController::class, 'show'])->name('paragraph.show');
 Route::get('/faq', [FaqController::class, 'index'])->name('faq.index');
 Route::get('/contact-us', [ContactController::class, 'index'])->name('contact.index');
+Route::get('/page/{slug}', [PageController::class, 'show'])->name('page.show');
 
 //Route::get('/', function () {
 //    return view('welcome');
