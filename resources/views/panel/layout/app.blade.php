@@ -200,6 +200,7 @@
                                         <span>Dropbox</span>
                                     </a>
                                 </div>
+
                                 <div class="col">
                                     <a class="dropdown-icon-item" href="#!">
                                         <img src="{{ asset('/panel/borex/assets/images/brands/mail_chimp.png') }}" alt="mail_chimp">
