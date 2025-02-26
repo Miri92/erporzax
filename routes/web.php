@@ -9,6 +9,7 @@ use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Front\ContactController;
 use App\Http\Controllers\Front\ParagraphController;
 use App\Http\Controllers\Front\LawCommentController;
+use App\Http\Controllers\ProductPurchaseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +23,6 @@ use App\Http\Controllers\Front\LawCommentController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/law-comments', [LawCommentController::class, 'index'])->name('law_comments');
-Route::get('/law-comments/{id}', [LawCommentController::class, 'show'])->name('law_comments.show');
-Route::get('/paragraph/{id}', [ParagraphController::class, 'show'])->name('paragraph.show');
 Route::get('/faq', [FaqController::class, 'index'])->name('faq.index');
 Route::get('/contact-us', [ContactController::class, 'index'])->name('contact.index');
 Route::get('/page/{slug}', [PageController::class, 'show'])->name('page.show');
@@ -41,5 +39,7 @@ Route::middleware('auth')->group(function () {
     //Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
 });
+
+Route::resource('product_purchases', ProductPurchaseController::class);
 
 require __DIR__.'/auth.php';

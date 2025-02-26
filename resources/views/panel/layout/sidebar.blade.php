@@ -13,39 +13,11 @@
                 </a>
             </li>
 
-
+            <!-- Add Product Purchase menu item -->
             <li>
-                <a href="{{ route('panel.doc.index') }}">
-                    <i class="icon nav-icon" data-eva="book-open"></i>
-                    <span class="menu-item" data-key="t-calendar">Doc</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="{{ route('panel.menu.index') }}">
-                    <i class="icon nav-icon" data-eva="menu"></i>
-                    <span class="menu-item" data-key="t-calendar">Menus</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="{{ route('panel.slider.index') }}">
-                    <i class="icon nav-icon" data-eva="monitor"></i>
-                    <span class="menu-item" data-key="t-calendar">Slider</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="{{ route('panel.question.index') }}">
-                    <i class="fas fa-question-circle"></i>
-                    <span class="menu-item" data-key="t-calendar">FAQ</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="{{ route('panel.testimonial.index') }}">
-                    <i class="icon nav-icon" data-eva="message-square-outline"></i>
-                    <span class="menu-item" data-key="t-calendar">Testimonials</span>
+                <a href="{{ route('panel.product_purchases.index') }}">
+                    <i class="icon nav-icon" data-eva="shopping-cart-outline"></i>
+                    <span class="menu-item" data-key="t-product-purchases">Product Purchases</span>
                 </a>
             </li>
 
@@ -53,13 +25,6 @@
                 <a href="{{ route('panel.user.index') }}">
                     <i class="icon nav-icon" data-eva="person-outline"></i>
                     <span class="menu-item" data-key="t-calendar">Users</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="{{ route('panel.pages.index') }}">
-                    <i class="mdi mdi-book-open-page-variant"></i>
-                    <span class="menu-item" data-key="t-calendar">Pages</span>
                 </a>
             </li>
 
