@@ -13,11 +13,18 @@
                 </a>
             </li>
 
-            <!-- Add Product Purchase menu item -->
             <li>
                 <a href="{{ route('panel.product_purchases.index') }}">
                     <i class="icon nav-icon" data-eva="shopping-cart-outline"></i>
                     <span class="menu-item" data-key="t-product-purchases">Product Purchases</span>
+                </a>
+            </li>
+
+            <!-- Add Product menu item -->
+            <li>
+                <a href="{{ route('panel.products.index') }}">
+                    <i class="icon nav-icon" data-eva="cube-outline"></i>
+                    <span class="menu-item" data-key="t-products">Products</span>
                 </a>
             </li>
 

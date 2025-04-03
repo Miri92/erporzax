@@ -14,6 +14,7 @@ use App\Http\Controllers\Panel\SocialIconController;
 use App\Http\Controllers\Panel\Auth\LoginController;
 use App\Http\Controllers\Panel\TestimonialController;
 use App\Http\Controllers\Panel\ProductPurchaseController;
+use App\Http\Controllers\Panel\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,10 +68,18 @@ Route::middleware([AuthenticateAdmin::class])->group(function () {
             Route::get('/show/{product_purchase}', 'show')->name('show');
             Route::post('/delete/{product_purchase}', 'destroy')->name('destroy');
         });
-});
 
-//Route::get('/', function () {
-//    return view('test');
-//
-//    //return view('welcome');
-//});
+    Route::controller(ProductController::class)
+        ->prefix('products')
+        ->name('products.')->group(function () {
+            Route::get('/', 'index')->name('index');
+            Route::get('/create', 'create')->name('create');
+            Route::post('/store', 'store')->name('store');
+            Route::get('/edit/{product}', 'edit')->name('edit');
+            Route::post('/edit/{product}', 'update')->name('update');
+            Route::get('/show/{product}', 'show')->name('show');
+            Route::post('/delete/{product}', 'destroy')->name('destroy');
+            Route::get('/search', 'searchProductAjax')->name('search');
+            
+        });
+});

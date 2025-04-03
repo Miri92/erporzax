@@ -19,6 +19,9 @@
 
     <!-- App Css-->
     <link href="{{ asset('/panel/borex/assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     @yield('header-css-bottom')
 
 </head>
@@ -739,6 +742,8 @@
 @yield('footer-js-top')
 
 <!-- JAVASCRIPT -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
 <script src="{{ asset('/panel/borex/assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('/panel/borex/assets/libs/metismenujs/metismenujs.min.js') }}"></script>
 <script src="{{ asset('/panel/borex/assets/libs/simplebar/simplebar.min.js') }}"></script>
@@ -749,6 +754,7 @@
 @yield('footer-js')
 
 <script src="{{ asset('/panel/borex/assets/js/app.js') }}"></script>
+
 
 @yield('footer-js-bottom')
 
