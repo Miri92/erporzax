@@ -12,28 +12,60 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Create Product Purchase</h4>
+                    <h4 class="card-title">Alış fakturası yarat</h4>
                 </div>
                 <div class="card-body">
                     <form action="{{ route('panel.product_purchases.store') }}" method="POST">
                         @csrf
 
 
-                        <div class="form-group">
-                            <label for="name">İstehsalçı * :</label>
-                            <input type="text" name="name" class="form-control" required>
+                        <div class="row mb-5">
+                            <div class="col-6">
+                                <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                <label for="floatingInput">İstehsalçı * :</label>
+                                </div>
+
+                                <div class="form-floating">
+                                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                <label for="floatingPassword">Faktura nömrəsi * :</label>
+                                </div>
+
+                                
+                            </div>
+
+                            <div class="col-6">
+                                
+                                <div class="form-floating mb-3">
+                                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                        <option value="1">Nağd ödəniş</option>
+                                        <option value="2">Bank ödənişi</option>
+                                    </select>
+                                    <label for="floatingSelect">Ödəniş növü * :</label>
+                                </div>
+
+                                <div class="form-floating">
+                                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                    <label for="floatingPassword">Təfərrüatlar:</label>
+                                </div>
+                            </div>
                         </div>
+
+
+                        
 
                         <table class="table repeater">
                             <thead>
                                 <tr>
-                                    <th>Product Name</th>
-                                    <th>Batch ID</th>
+                                    <th>Tibb Məlumatı*</th>
+                                    <th>Toplu Id</th>
                                     <th>Son istifadə tarixi*</th>
                                     <th>Stok Miqdarı</th>
-                                    <th>Qutu Nümunəsi*</th>
                                     <th>Qutu Miqdarı*</th>
-                                    <th></th>
+                                    <th>İstehsalçı Qiyməti*</th>
+                                    <th>Qutu MRP *</th>
+                                    <th>Ümumi alış qiyməti</th>
+                                    <th>Fəaliyyət</th>
                                 </tr>
                             </thead>
                             <tbody data-repeater-list>
@@ -45,7 +77,11 @@
                                     <td><input type="date" name="batch_id" class="form-control" required></td>
                                     <td><input type="number" name="quantity" class="form-control" required></td>
                                     <td><input type="number" name="price" class="form-control" required></td>
-                                    <th></th>
+                                    <td><input type="number" name="price" class="form-control" required></td>
+                                    <td><input type="number" name="price" class="form-control" required></td>
+                                    <td><input type="number" name="price" class="form-control" required></td>
+                                    <td><input type="number" name="price" class="form-control" required></td>
+                                    <td></td>
                                 </tr>
                                 
                             </tbody>
@@ -70,67 +106,16 @@
 <script src="{{ url('/panel/repeater/jquery.repeater.min.js') }}"></script>
 
 <script>
-    // $('.product_name_ajax').select2({
-    //     ajax: {
-    //         url: "{{ route('panel.products.search') }}",
-    //         dataType: 'json',
-    //         processResults: function (data) {
-    //             return {
-    //                 results: data.map(function (item) {
-    //                     return {
-    //                         id: item.id,
-    //                         text: item.name // Map 'name' to 'text'
-    //                     };
-    //                 })
-    //             };
-    //         }
-    //     }
-    // });
-
-
     $('.repeater').repeater({
         ready: function () {
-            $('.product_name_ajax').select2({
-                width: 'style', // Uses CSS-defined width
-                placeholder: "Select a product",
-                ajax: {
-                    url: "{{ route('panel.products.search') }}",
-                    dataType: 'json',
-                    processResults: function (data) {
-                        return {
-                            results: data.map(function (item) {
-                                return {
-                                    id: item.id,
-                                    text: item.name // Map 'name' to 'text'
-                                };
-                            })
-                        };
-                    }
-                }
-            });
+            initializeSelect2($('.product_name_ajax'));
+
         },
         show: function () {
             $(this).slideDown();
 
             // Reinitialize Select2 for the newly added item
-            $(this).find('.product_name_ajax').select2({
-                width: 'style', // Uses CSS-defined width
-                placeholder: "Select a product",
-                ajax: {
-                    url: "{{ route('panel.products.search') }}",
-                    dataType: 'json',
-                    processResults: function (data) {
-                        return {
-                            results: data.map(function (item) {
-                                return {
-                                    id: item.id,
-                                    text: item.name // Map 'name' to 'text'
-                                };
-                            })
-                        };
-                    }
-                }
-            });
+            initializeSelect2($(this).find('.product_name_ajax'));
             
         },
         hide: function (deleteElement) {
@@ -139,5 +124,25 @@
             }
         }
     });
+
+    // Function to initialize Select2 with AJAX search
+    function initializeSelect2(element) {
+        element.select2({
+            width: 'style', // Uses CSS-defined width
+            placeholder: "Select a product",
+            ajax: {
+                url: "{{ route('panel.products.search') }}",
+                dataType: 'json',
+                processResults: function (data) {
+                    return {
+                        results: data.map(item => ({
+                            id: item.id,
+                            text: item.name // Map 'name' to 'text'
+                        }))
+                    };
+                }
+            }
+        });
+    }
 </script>
 @endsection
