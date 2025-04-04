@@ -754,6 +754,7 @@
 @yield('footer-js')
 
 <script src="{{ asset('/panel/borex/assets/js/app.js') }}"></script>
+<script src="{{ asset('/panel/Custom/js/header.js') }}"></script>
 
 
 @yield('footer-js-bottom')
