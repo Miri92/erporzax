@@ -12,7 +12,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Alış fakturası yarat</h4>
+                    <h4 class="card-title"><i class="fas fa-money-check-alt"></i> Alış fakturası yarat</h4>
                 </div>
                 <div class="card-body">
                     <form action="{{ route('panel.product_purchases.store') }}" method="POST">
@@ -80,19 +80,51 @@
                                     <td><input type="number" name="price" class="form-control" required></td>
                                     <td><input type="number" name="price" class="form-control" required></td>
                                     <td><input type="number" name="price" class="form-control" required></td>
-                                    <td><input type="number" name="price" class="form-control" required></td>
-                                    <td></td>
+                                    <td>
+                                        <button data-repeater-delete type="button" class="btn btn-outline-danger">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                    </td>
                                 </tr>
                                 
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <td colspan="4">
-                                        <button data-repeater-create type="button" class="btn btn-primary">Add</button>
+                                    <td colspan="7" class="text-end">Hazır ki faktura cəmi:</td>
+                                    <td><input type="text" name="batch_id" class="form-control" readonly></td>
+                                    <td>
+                                        <button data-repeater-create type="button" class="btn btn-outline-info">
+                                        <i class="fas fa-plus"></i>
+                                        </button>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td colspan="7" class="text-end">Əvvəlki faktura ilə birlikdə:</td>
+                                    <td><input type="text" name="batch_id" class="form-control" readonly></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="7" class="text-end">Ödənilmiş məbləğ:</td>
+                                    <td><input type="text" name="batch_id" class="form-control" required></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="7" class="text-end">Ödənilməli Borc:</td>
+                                    <td><input type="text" name="batch_id" class="form-control" readonly></td>
+                                    <td></td>
+                                </tr>
                         </table>
-                        <button type="submit" class="btn btn-primary">Create</button>
+
+
+                        <div class="row">
+                            <div class="col-12 text-end">
+                                <button type="submit" class="btn btn-success ">
+                                Alış et
+                                </button>
+                            </div>
+                        </div>
+
+                        
                     </form>
                 </div>
             </div>
@@ -122,7 +154,8 @@
             if (confirm('Are you sure you want to delete this element?')) {
                 $(this).slideUp(deleteElement);
             }
-        }
+        },
+        isFirstItemUndeletable: true
     });
 
     // Function to initialize Select2 with AJAX search
