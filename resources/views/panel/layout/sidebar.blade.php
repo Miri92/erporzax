@@ -9,14 +9,14 @@
             <li>
                 <a href="{{ route('panel.dashboard.index') }}">
                     <i class="icon nav-icon" data-eva="grid-outline"></i>
-                    <span class="menu-item" data-key="t-dashboards">Dashboard</span>
+                    <span class="menu-item" data-key="t-dashboards">Əsas Səhifə</span>
                 </a>
             </li>
 
             <li>
                 <a href="{{ route('panel.product_purchases.index') }}">
                     <i class="icon nav-icon" data-eva="shopping-cart-outline"></i>
-                    <span class="menu-item" data-key="t-product-purchases">Product Purchases</span>
+                    <span class="menu-item" data-key="t-product-purchases">Satınalma</span>
                 </a>
             </li>
 
@@ -24,21 +24,28 @@
             <li>
                 <a href="{{ route('panel.products.index') }}">
                     <i class="icon nav-icon" data-eva="cube-outline"></i>
-                    <span class="menu-item" data-key="t-products">Products</span>
+                    <span class="menu-item" data-key="t-products">Məhsullar</span>
                 </a>
             </li>
 
             <li>
                 <a href="{{ route('panel.user.index') }}">
                     <i class="icon nav-icon" data-eva="person-outline"></i>
-                    <span class="menu-item" data-key="t-calendar">Users</span>
+                    <span class="menu-item" data-key="t-calendar">İstifadəçilər</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ route('panel.manufacturers.index') }}">
+                    <i class="icon nav-icon" data-eva="calendar-outline"></i>
+                    <span class="menu-item" data-key="t-calendar">İstehsalçı</span>
                 </a>
             </li>
 
             <li>
                 <a href="{{ route('panel.options.edit', 1) }}">
                     <i class="icon nav-icon" data-eva="calendar-outline"></i>
-                    <span class="menu-item" data-key="t-calendar">Site Options</span>
+                    <span class="menu-item" data-key="t-calendar">Nizamlama</span>
                 </a>
             </li>
             <li>

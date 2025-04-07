@@ -4,17 +4,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\AuthenticateAdmin;
 use App\Http\Controllers\Panel\MenuController;
 use App\Http\Controllers\Panel\UserController;
-use App\Http\Controllers\Panel\PageController;
-use App\Http\Controllers\Panel\SliderController;
 use App\Http\Controllers\Panel\OptionsController;
-use App\Http\Controllers\Panel\QuestionController;
 use App\Http\Controllers\Panel\DashboardController;
-use App\Http\Controllers\Panel\DocController;
 use App\Http\Controllers\Panel\SocialIconController;
 use App\Http\Controllers\Panel\Auth\LoginController;
-use App\Http\Controllers\Panel\TestimonialController;
 use App\Http\Controllers\Panel\ProductPurchaseController;
 use App\Http\Controllers\Panel\ProductController;
+use App\Http\Controllers\Panel\ManufacturerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -81,5 +77,18 @@ Route::middleware([AuthenticateAdmin::class])->group(function () {
             Route::post('/delete/{product}', 'destroy')->name('destroy');
             Route::get('/search', 'searchProductAjax')->name('search');
             
+        });
+
+
+    Route::controller(ManufacturerController::class)
+        ->prefix('manufacturers')
+        ->name('manufacturers.')->group(function () {
+            Route::get('/', 'index')->name('index');
+            Route::get('/create', 'create')->name('create');
+            Route::post('/store', 'store')->name('store');
+            Route::get('/edit/{product}', 'edit')->name('edit');
+            Route::post('/edit/{product}', 'update')->name('update');
+            Route::get('/show/{product}', 'show')->name('show');
+            Route::post('/delete/{manufacturer}', 'destroy')->name('destroy');
         });
 });
